@@ -13,6 +13,7 @@ import (
 type Options struct {
 	directory         string
 	fileSize          uint
+	filesystemPercent uint
 	numberOfFiles     uint
 	blockSize         uint
 	writeRatio        float64
@@ -24,6 +25,7 @@ func parseArgs() *Options {
 	var options Options
 	flag.StringVar(&options.directory, "directory", "", "working directory")
 	flag.UintVar(&options.fileSize, "file-size", 100, "file size (MB)")
+	flag.UintVar(&options.filesystemPercent, "filesystem-percent", 0, "percent of the filesystem used in the experiment (override file-size)")
 	flag.UintVar(&options.numberOfFiles, "number-of-files", 1, "number of files to read/write")
 	flag.UintVar(&options.blockSize, "block-size", 4, "block size (KB)")
 	flag.Float64Var(&options.writeRatio, "write-ratio", -1, "write ratio (writes/reads)")
@@ -31,7 +33,13 @@ func parseArgs() *Options {
 	flag.UintVar(&options.time, "time", 7, "time")
 	flag.Parse()
 
-	log.Println("Options:", options)
+	log.Println("Options:")
+	log.Printf("   directory=%v, file-size=%v, filesystem-percent=%v, "+
+		"number-of-files=%v, block-size=%v",
+		options.directory, options.fileSize, options.filesystemPercent,
+		options.numberOfFiles, options.blockSize)
+	log.Printf("   write-ratio=%v, write-ratio-thread0=%v, time=%v",
+		options.writeRatio, options.writeRatioThread0, options.time)
 
 	aux, err := os.Stat(options.directory)
 	if err != nil || !aux.IsDir() {
@@ -39,6 +47,9 @@ func parseArgs() *Options {
 	}
 	if options.fileSize < 10 {
 		log.Fatal("file-size must be >= 10")
+	}
+	if options.filesystemPercent > 100 {
+		log.Fatal("filesystem-percent must be <= 100")
 	}
 	if options.blockSize < 4 || options.blockSize > (options.fileSize*1024) {
 		log.Fatal("invalid block-size")
@@ -61,11 +72,23 @@ func parseArgs() *Options {
 
 func main() {
 	options := parseArgs()
+	statfs := getFilesystemStats(options.directory)
 	ok := make(chan int)
 	threads := make([]*Thread, options.numberOfFiles)
 
+	if options.filesystemPercent > 0 {
+		percentBlocks := (uint(statfs.Bavail) * uint(statfs.Bsize)) / uint(1024*1024) // in MiB
+		percentBlocks = (percentBlocks * options.filesystemPercent) / uint(100)       // percentage
+		options.fileSize = percentBlocks / uint(options.numberOfFiles)                // per file/thread
+		log.Printf("filesystem-percent defined to %v%%. Overriding file-size to %v", options.filesystemPercent, options.fileSize)
+	}
+	if ((options.blockSize * 1024) % uint(statfs.Bsize)) != 0 {
+		log.Fatal(fmt.Sprintf("block-size must be multiple of %v KiB", statfs.Bsize/1024))
+	}
+
+	////// Creating data for the Threads and creating files //////
 	for i := uint(0); i < options.numberOfFiles; i++ {
-		t := NewThread(i, fmt.Sprintf("%v/%v", options.directory, i), options)
+		t := NewThread(i, fmt.Sprintf("%v/%v", options.directory, i), options, statfs)
 		threads[i] = t
 		go t.createFile(ok)
 	}
@@ -73,6 +96,7 @@ func main() {
 		<-ok
 	}
 
+	////// Defining writeRatios //////
 	var writeRatios []float64
 	if options.writeRatio < 0 {
 		writeRatios = make([]float64, 11)
@@ -84,6 +108,7 @@ func main() {
 		writeRatios[0] = options.writeRatio
 	}
 
+	////// Experiment Loop //////
 	var r float64
 	for _, ratio := range writeRatios {
 		for i, t := range threads {
@@ -97,27 +122,45 @@ func main() {
 		for range threads {
 			<-ok
 		}
-		fmt.Printf("%.2f, %v\n", ratio, threads[0].throughput)
+		var sum uint64
+		for _, t := range threads {
+			sum += t.throughput
+		}
+		fmt.Printf("%.2f, %v, %v\n", ratio, threads[0].throughput, sum)
 	}
 
+	////// Removing Files //////
 	for _, t := range threads {
 		t.removeFile()
 	}
 }
 
+func getFilesystemStats(path string) *syscall.Statfs_t {
+	var stats syscall.Statfs_t
+	if err := syscall.Statfs(path, &stats); err != nil {
+		log.Fatal(fmt.Sprintf("Impossible to read filesystem data from path %v", path))
+	}
+	log.Printf(fmt.Sprintf("Filesystem data: type=%v, block_size=%v, blocks=%v, blocks_free=%v, blocks_available=%v",
+		stats.Type, stats.Bsize, stats.Blocks, stats.Bfree, stats.Bavail))
+
+	return &stats
+}
+
 type Thread struct {
 	id         uint
 	options    *Options
+	statfs     *syscall.Statfs_t
 	filename   string
 	fd         int
 	throughput uint64 // MB/sec
 }
 
-func NewThread(id uint, filename string, options *Options) *Thread {
+func NewThread(id uint, filename string, options *Options, statfs *syscall.Statfs_t) *Thread {
 	var ret Thread
 	ret.id = id
 	ret.filename = filename
 	ret.options = options
+	ret.statfs = statfs
 	return &ret
 }
 
