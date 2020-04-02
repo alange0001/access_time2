@@ -22,7 +22,7 @@ class Graphs:
 	files = None
 	conn = None
 
-	def __init__(self):
+	def __init__(self, path=None):
 		self.filenames = []
 		self.files = []
 		self.conn = sqlite3.connect(':memory:')
@@ -32,6 +32,9 @@ class Graphs:
 			  'NumberOfFiles INT, FilesystemPercent INT, FileSize INT, '+
 			  'Runs INT, WriteRatio NUMERIC(3,1), WriteRatioThread0 NUMERIC(3,1))')
 		idx = 0
+		if path is not None:
+			print("changing workdir to {}".format(path))
+			os.chdir(path)
 		for i in os.listdir():
 			if re.search(r'\.csv$', i) is not None:
 				self.filenames.append(i)
@@ -186,5 +189,6 @@ class File:
 		if save:
 			fig.savefig(self.metadata['FileName'].replace('.csv', '.{}'.format(Options.format)))
 		plt.show()
+
 
 g = Graphs()

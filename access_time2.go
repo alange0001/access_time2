@@ -12,15 +12,20 @@ import (
 )
 
 type Options struct {
-	Directory         string
-	FileSize          uint
-	FilesystemPercent uint
-	NumberOfFiles     uint
-	BlockSize         uint
-	WriteRatio        float64
-	WriteRatioThread0 float64
-	Time              uint
-	Runs              uint
+	Directory            string
+	FileSize             uint
+	FilesystemPercent    uint
+	NumberOfFiles        uint
+	BlockSize            uint
+	WriteRatio           float64
+	WriteRatioThread0    float64
+	RandomRatio          float64
+	Time                 uint
+	Runs                 uint
+	ExperimentMode       string
+	ExperimentModeCreate bool
+	ExperimentModeRun    bool
+	ExperimentModeRemove bool
 }
 
 func parseArgs() (*Options, *syscall.Statfs_t) {
@@ -32,8 +37,10 @@ func parseArgs() (*Options, *syscall.Statfs_t) {
 	flag.UintVar(&options.BlockSize, "block-size", 4, "block size (KB)")
 	flag.Float64Var(&options.WriteRatio, "write-ratio", -1, "write ratio (writes/reads)")
 	flag.Float64Var(&options.WriteRatioThread0, "write-ratio-thread0", -1, "write ratio of thread0 (writes/reads)")
+	flag.Float64Var(&options.RandomRatio, "random-ratio", 1, "ramdom ratio (random/sequential)")
 	flag.UintVar(&options.Time, "time", 7, "experiment time per run")
 	flag.UintVar(&options.Runs, "runs", 1, "number of runs per write-ratio")
+	flag.StringVar(&options.ExperimentMode, "experiment-mode", "create-and-run", "experiment mode: create-and-run (default), create, run, remove")
 	flag.Parse()
 
 	j, _ := json.Marshal(options)
@@ -44,36 +51,53 @@ func parseArgs() (*Options, *syscall.Statfs_t) {
 		log.Fatal("invalid directory")
 	}
 	if options.FileSize < 10 {
-		log.Fatal("file-size must be >= 10")
+		log.Fatal("--file-size must be >= 10")
 	}
 	if options.FilesystemPercent > 100 {
-		log.Fatal("filesystem-percent must be <= 100")
+		log.Fatal("--filesystem-percent must be <= 100")
 	}
 	if options.BlockSize < 4 || options.BlockSize > (options.FileSize*1024) {
-		log.Fatal("invalid block-size")
+		log.Fatal("invalid --block-size")
 	}
 	if options.NumberOfFiles < 1 {
-		log.Fatal("number-of-files must be > 0")
+		log.Fatal("--number-of-files must be > 0")
 	}
 	if options.WriteRatio > 1 {
-		log.Fatal("write-ratio must be between 0 and 1")
+		log.Fatal("--write-ratio must be between 0 and 1")
 	}
 	if options.WriteRatioThread0 > 1 {
-		log.Fatal("write-ratio-thread0 must be between 0 and 1")
+		log.Fatal("--write-ratio-thread0 must be between 0 and 1")
+	}
+	if options.RandomRatio < 0 || options.RandomRatio > 1 {
+		log.Fatal("--random-ratio must be between 0 and 1")
 	}
 	if options.Time < 1 {
-		log.Fatal("time must be >= 1")
+		log.Fatal("--time must be >= 1")
 	}
 	if options.Runs < 1 {
 		log.Fatal("runs must be >= 1")
 		if options.WriteRatio < 0 {
-			log.Fatal("--write-ratio must be defined with the parameter --runs")
+			log.Fatal("--write-ratio must be defined with the option --runs")
 		}
+	}
+	switch options.ExperimentMode {
+	case "create-and-run":
+		options.ExperimentModeCreate = true
+		options.ExperimentModeRun = true
+		options.ExperimentModeRemove = true
+	case "create":
+		options.ExperimentModeCreate = true
+	case "run":
+		options.ExperimentModeRun = true
+	case "remove":
+		options.ExperimentModeRemove = true
+	default:
+		log.Fatal("invalid --experiment-mode")
 	}
 
 	statfs := getFilesystemStats(options.Directory)
 	if options.FilesystemPercent > 0 {
-		percentBlocks := (uint(statfs.Bavail) * uint(statfs.Bsize)) / uint(1024*1024) // in MiB
+		percentBlocks := (uint(statfs.Blocks) * uint(statfs.Bsize)) / uint(1024*1024) // in MiB
 		percentBlocks = (percentBlocks * options.FilesystemPercent) / uint(100)       // percentage
 		options.FileSize = percentBlocks / uint(options.NumberOfFiles)                // per file/thread
 		log.Printf("filesystem-percent defined to %v%%. Overriding file-size to %v", options.FilesystemPercent, options.FileSize)
@@ -97,61 +121,66 @@ func main() {
 	for i := uint(0); i < options.NumberOfFiles; i++ {
 		t := NewThread(i, fmt.Sprintf("%v/%v", options.Directory, i), options, statfs)
 		threads[i] = t
-		go t.createFile(ok)
-	}
-	for range threads {
-		<-ok
-	}
-
-	////// Defining writeRatios //////
-	var writeRatios []float64
-	if options.WriteRatio < 0 {
-		writeRatios = make([]float64, 11)
-		for i := 0; i < 11; i++ {
-			writeRatios[i] = float64(i) / float64(10)
+		if options.ExperimentModeCreate {
+			t.createFile()
+		} else {
+			t.openFile()
 		}
-	} else {
-		writeRatios = make([]float64, 1)
-		writeRatios[0] = options.WriteRatio
 	}
 
-	////// Experiment Loop //////
-	timeStart := time.Now()
-	var r float64
-	for _, ratio := range writeRatios {
-		for runs := uint(0); runs < options.Runs; runs++ {
-			for i, t := range threads {
-				if i == 0 && options.WriteRatioThread0 >= 0 {
-					r = options.WriteRatioThread0
-				} else {
-					r = ratio
+	if options.ExperimentModeRun {
+		////// Defining writeRatios //////
+		var writeRatios []float64
+		if options.WriteRatio < 0 {
+			writeRatios = make([]float64, 11)
+			for i := 0; i < 11; i++ {
+				writeRatios[i] = float64(i) / float64(10)
+			}
+		} else {
+			writeRatios = make([]float64, 1)
+			writeRatios[0] = options.WriteRatio
+		}
+
+		////// Experiment Loop //////
+		timeStart := time.Now()
+		var r float64
+		for _, ratio := range writeRatios {
+			for runs := uint(0); runs < options.Runs; runs++ {
+				for i, t := range threads {
+					if i == 0 && options.WriteRatioThread0 >= 0 {
+						r = options.WriteRatioThread0
+					} else {
+						r = ratio
+					}
+					go t.processFile(r, ok)
 				}
-				go t.processFile(r, ok)
+				for range threads {
+					<-ok
+				}
+				ratioThread0 := ratio
+				if options.WriteRatioThread0 >= 0 {
+					ratioThread0 = options.WriteRatioThread0
+				}
+				// Print Results: //
+				fmt.Printf("%.2f, %.1f, %.1f", time.Since(timeStart).Seconds(), ratioThread0, ratio)
+				var sum uint64
+				for _, t := range threads {
+					sum += t.throughput
+				}
+				fmt.Printf(", %v", sum)
+				for _, t := range threads {
+					fmt.Printf(", %v", t.throughput)
+				}
+				fmt.Printf("\n")
 			}
-			for range threads {
-				<-ok
-			}
-			ratioThread0 := ratio
-			if options.WriteRatioThread0 >= 0 {
-				ratioThread0 = options.WriteRatioThread0
-			}
-			// Print Results: //
-			fmt.Printf("%.2f, %.1f, %.1f", time.Since(timeStart).Seconds(), ratioThread0, ratio)
-			var sum uint64
-			for _, t := range threads {
-				sum += t.throughput
-			}
-			fmt.Printf(", %v", sum)
-			for _, t := range threads {
-				fmt.Printf(", %v", t.throughput)
-			}
-			fmt.Printf("\n")
 		}
 	}
 
 	////// Removing Files //////
-	for _, t := range threads {
-		t.removeFile()
+	if options.ExperimentModeRemove {
+		for _, t := range threads {
+			t.removeFile()
+		}
 	}
 }
 
@@ -184,24 +213,40 @@ func NewThread(id uint, filename string, options *Options, statfs *syscall.Statf
 	return &ret
 }
 
-func (thread *Thread) createFile(ok chan int) {
+func (thread *Thread) createFile() {
 	log.Printf("thread %v: Creating file %v", thread.id, thread.filename)
-	fdLocal, err := syscall.Open(thread.filename, syscall.O_CREAT|syscall.O_RDWR|syscall.O_DIRECT, 0600)
+	fd, err := syscall.Open(thread.filename, syscall.O_CREAT|syscall.O_RDWR|syscall.O_DIRECT, 0600)
 	if err != nil {
 		log.Fatal(fmt.Sprintf("thread %v: Error creating file %v: %v", thread.id, thread.filename, err))
 	}
 	buffer := make([]byte, 1024*1024)
 	rand.Read(buffer)
 	for i := uint(0); i < thread.options.FileSize; i++ {
-		if _, err := syscall.Write(fdLocal, buffer); err != nil {
+		if _, err := syscall.Write(fd, buffer); err != nil {
 			log.Fatal(fmt.Sprintf("thread %v: Error writing file %v: %v", thread.id, thread.filename, err))
 		}
 	}
-	if err := syscall.Fsync(fdLocal); err != nil {
+	if err := syscall.Fsync(fd); err != nil {
 		log.Fatal(fmt.Sprintf("thread %v: Fsync error: %v", thread.id, err))
 	}
-	thread.fd = fdLocal
-	ok <- 1
+	thread.fd = fd
+}
+
+func (thread *Thread) openFile() {
+	var stats syscall.Stat_t
+	log.Printf("thread %v: Creating file %v", thread.id, thread.filename)
+	fd, err := syscall.Open(thread.filename, syscall.O_RDWR|syscall.O_DIRECT, 0600)
+	if err != nil {
+		log.Fatal(fmt.Sprintf("thread %v: Error opening file %v: %v", thread.id, thread.filename, err))
+	}
+	if err := syscall.Fstat(fd, &stats); err != nil {
+		log.Fatal(fmt.Sprintf("thread %v: Fstat error : %v", thread.id, err))
+	}
+	if uint64(stats.Size) < uint64(thread.options.FileSize) {
+		log.Fatal(fmt.Sprintf("thread %v: Invalid file size", thread.id))
+	}
+
+	thread.fd = fd
 }
 
 func (thread *Thread) removeFile() {
@@ -216,24 +261,37 @@ func (thread *Thread) removeFile() {
 }
 
 func (thread *Thread) processFile(writeRatio float64, ok chan int) {
+	randomRatio := int32(thread.options.RandomRatio * 100)
 	fileBlocks := int64((thread.options.FileSize * 1024) / thread.options.BlockSize)
 	buffer := make([]byte, thread.options.BlockSize*1024)
 	rand.Read(buffer)
 
 	log.Printf(fmt.Sprintf("thread %v: main loop, writeRatio=%.1f", thread.id, writeRatio))
 	var count uint64
+	var r int64
 	timeStart := time.Now()
 	for uint(time.Since(timeStart).Seconds()) < thread.options.Time {
 		for i := 0; i < 100; i++ {
-			r := rand.Int63n(fileBlocks)
-			syscall.Seek(thread.fd, r*1024, 0)
+			if randomRatio >= rand.Int31n(100) {
+				r = rand.Int63n(fileBlocks)
+				if _, err := syscall.Seek(thread.fd, r*1024, 0); err != nil {
+					log.Fatal(fmt.Sprintf("thread %v seek error: %v", thread.id, err))
+				}
+			} else {
+				r = (r + 1) % fileBlocks
+				if r == 0 {
+					if _, err := syscall.Seek(thread.fd, r*1024, 0); err != nil {
+						log.Fatal(fmt.Sprintf("thread %v seek error: %v", thread.id, err))
+					}
+				}
+			}
 			if rand.Float64() < writeRatio {
 				if _, err := syscall.Write(thread.fd, buffer); err != nil {
-					log.Fatal(fmt.Sprintf("thread %v: unable to write %v: %v", thread.id, thread.filename, err))
+					log.Fatal(fmt.Sprintf("thread %v write error: %v", thread.id, err))
 				}
 			} else {
 				if _, err := syscall.Read(thread.fd, buffer); err != nil {
-					log.Fatal(fmt.Sprintf("thread %v: unable to read %v: %v", thread.id, thread.filename, err))
+					log.Fatal(fmt.Sprintf("thread %v read error: %v", thread.id, err))
 				}
 			}
 			count++
