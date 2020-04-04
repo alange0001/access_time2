@@ -2,24 +2,30 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"flag"
 	"fmt"
 	"log"
 	"math/rand"
 	"os"
+	"strconv"
+	"strings"
 	"syscall"
 	"time"
 )
+
+type ratioArray []float64
+type uintArray []uint
 
 type Options struct {
 	Directory            string
 	FileSize             uint
 	FilesystemPercent    uint
 	NumberOfFiles        uint
-	BlockSize            uint
-	WriteRatio           float64
-	WriteRatioThread0    float64
-	RandomRatio          float64
+	BlockSize            uintArray
+	WriteRatio           ratioArray
+	WriteRatioThread0    ratioArray
+	RandomRatio          ratioArray
 	Time                 uint
 	Runs                 uint
 	ExperimentMode       string
@@ -28,16 +34,53 @@ type Options struct {
 	ExperimentModeRemove bool
 }
 
+func (self *uintArray) String() string {
+	return fmt.Sprintf("%v", *self)
+}
+
+func (self *uintArray) Set(value string) error {
+	if len(value) > 0 {
+		for _, item := range strings.Split(value, ",") {
+			val, err := strconv.ParseUint(item, 10, 32)
+			if err != nil {
+				return err
+			}
+			*self = append(*self, uint(val))
+		}
+	}
+	return nil
+}
+
+func (self *ratioArray) String() string {
+	return fmt.Sprintf("%v", *self)
+}
+
+func (self *ratioArray) Set(value string) error {
+	if len(value) > 0 {
+		for _, item := range strings.Split(value, ",") {
+			val, err := strconv.ParseFloat(item, 64)
+			if err != nil {
+				return err
+			}
+			if val < 0 || val > 1 {
+				return errors.New("ratio must be between 0 and 1")
+			}
+			*self = append(*self, val)
+		}
+	}
+	return nil
+}
+
 func parseArgs() (*Options, *syscall.Statfs_t) {
 	var options Options
 	flag.StringVar(&options.Directory, "directory", "", "working directory")
 	flag.UintVar(&options.FileSize, "file-size", 100, "file size (MB)")
 	flag.UintVar(&options.FilesystemPercent, "filesystem-percent", 0, "percent of the filesystem used in the experiment (override file-size)")
 	flag.UintVar(&options.NumberOfFiles, "number-of-files", 1, "number of files to read/write")
-	flag.UintVar(&options.BlockSize, "block-size", 4, "block size (KB)")
-	flag.Float64Var(&options.WriteRatio, "write-ratio", -1, "write ratio (writes/reads)")
-	flag.Float64Var(&options.WriteRatioThread0, "write-ratio-thread0", -1, "write ratio of thread0 (writes/reads)")
-	flag.Float64Var(&options.RandomRatio, "random-ratio", 1, "ramdom ratio (random/sequential)")
+	flag.Var(&options.BlockSize, "block-size", "block size (KB)")
+	flag.Var(&options.WriteRatio, "write-ratio", "write ratio (writes/reads)")
+	flag.Var(&options.WriteRatioThread0, "write-ratio-thread0", "write ratio of thread0 (writes/reads)")
+	flag.Var(&options.RandomRatio, "random-ratio", "ramdom ratio (random/sequential)")
 	flag.UintVar(&options.Time, "time", 7, "experiment time per run")
 	flag.UintVar(&options.Runs, "runs", 1, "number of runs per write-ratio")
 	flag.StringVar(&options.ExperimentMode, "experiment-mode", "create-and-run", "experiment mode: create-and-run (default), create, run, remove")
@@ -56,27 +99,24 @@ func parseArgs() (*Options, *syscall.Statfs_t) {
 	if options.FilesystemPercent > 100 {
 		log.Fatal("--filesystem-percent must be <= 100")
 	}
-	if options.BlockSize < 4 || options.BlockSize > (options.FileSize*1024) {
-		log.Fatal("invalid --block-size")
+	if len(options.BlockSize) < 1 {
+		options.BlockSize = []uint{1024}
+	}
+	if len(options.WriteRatio) < 1 {
+		options.WriteRatio = []float64{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0}
+	}
+	if len(options.RandomRatio) < 1 {
+		options.RandomRatio = []float64{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0}
 	}
 	if options.NumberOfFiles < 1 {
 		log.Fatal("--number-of-files must be > 0")
-	}
-	if options.WriteRatio > 1 {
-		log.Fatal("--write-ratio must be between 0 and 1")
-	}
-	if options.WriteRatioThread0 > 1 {
-		log.Fatal("--write-ratio-thread0 must be between 0 and 1")
-	}
-	if options.RandomRatio < 0 || options.RandomRatio > 1 {
-		log.Fatal("--random-ratio must be between 0 and 1")
 	}
 	if options.Time < 1 {
 		log.Fatal("--time must be >= 1")
 	}
 	if options.Runs < 1 {
 		log.Fatal("runs must be >= 1")
-		if options.WriteRatio < 0 {
+		if len(options.WriteRatio) > 1 {
 			log.Fatal("--write-ratio must be defined with the option --runs")
 		}
 	}
@@ -102,8 +142,13 @@ func parseArgs() (*Options, *syscall.Statfs_t) {
 		options.FileSize = percentBlocks / uint(options.NumberOfFiles)                // per file/thread
 		log.Printf("filesystem-percent defined to %v%%. Overriding file-size to %v", options.FilesystemPercent, options.FileSize)
 	}
-	if ((options.BlockSize * 1024) % uint(statfs.Bsize)) != 0 {
-		log.Fatal(fmt.Sprintf("block-size must be multiple of %v KiB", statfs.Bsize/1024))
+	for _, i := range options.BlockSize {
+		if i < 4 || i > (options.FileSize*1024) {
+			log.Fatal("invalid --block-size")
+		}
+		if ((i * 1024) % uint(statfs.Bsize)) != 0 {
+			log.Fatal(fmt.Sprintf("--block-size must be multiple of %v KiB", statfs.Bsize/1024))
+		}
 	}
 
 	j, _ = json.Marshal(options)
@@ -129,49 +174,46 @@ func main() {
 	}
 
 	if options.ExperimentModeRun {
-		////// Defining writeRatios //////
-		var writeRatios []float64
-		if options.WriteRatio < 0 {
-			writeRatios = make([]float64, 11)
-			for i := 0; i < 11; i++ {
-				writeRatios[i] = float64(i) / float64(10)
-			}
-		} else {
-			writeRatios = make([]float64, 1)
-			writeRatios[0] = options.WriteRatio
-		}
-
 		////// Experiment Loop //////
 		timeStart := time.Now()
 		var r float64
-		for _, ratio := range writeRatios {
-			for runs := uint(0); runs < options.Runs; runs++ {
-				for i, t := range threads {
-					if i == 0 && options.WriteRatioThread0 >= 0 {
-						r = options.WriteRatioThread0
-					} else {
-						r = ratio
+		var ratiosThread0 ratioArray
+		for _, ratio := range options.WriteRatio {
+			if len(options.WriteRatioThread0) == 0 {
+				ratiosThread0 = ratioArray{ratio}
+			} else {
+				ratiosThread0 = options.WriteRatioThread0
+			}
+			for _, ratioT0 := range ratiosThread0 {
+				for _, blockSize := range options.BlockSize {
+					for _, randomRatio := range options.RandomRatio {
+						for runs := uint(0); runs < options.Runs; runs++ {
+							for i, t := range threads {
+								if i == 0 {
+									r = ratioT0
+								} else {
+									r = ratio
+								}
+								go t.processFile(blockSize, r, randomRatio, ok)
+							}
+							for range threads {
+								<-ok
+							}
+							// Print Results: //
+							fmt.Printf("%.2f, %v, %.1f, %.1f, %.1f",
+								time.Since(timeStart).Seconds(), blockSize, randomRatio, ratioT0, ratio)
+							var sum uint64
+							for _, t := range threads {
+								sum += t.throughput
+							}
+							fmt.Printf(", %v", sum)
+							for _, t := range threads {
+								fmt.Printf(", %v", t.throughput)
+							}
+							fmt.Printf("\n")
+						}
 					}
-					go t.processFile(r, ok)
 				}
-				for range threads {
-					<-ok
-				}
-				ratioThread0 := ratio
-				if options.WriteRatioThread0 >= 0 {
-					ratioThread0 = options.WriteRatioThread0
-				}
-				// Print Results: //
-				fmt.Printf("%.2f, %.1f, %.1f", time.Since(timeStart).Seconds(), ratioThread0, ratio)
-				var sum uint64
-				for _, t := range threads {
-					sum += t.throughput
-				}
-				fmt.Printf(", %v", sum)
-				for _, t := range threads {
-					fmt.Printf(", %v", t.throughput)
-				}
-				fmt.Printf("\n")
 			}
 		}
 	}
@@ -260,19 +302,19 @@ func (thread *Thread) removeFile() {
 	}
 }
 
-func (thread *Thread) processFile(writeRatio float64, ok chan int) {
-	randomRatio := int32(thread.options.RandomRatio * 100)
-	fileBlocks := int64((thread.options.FileSize * 1024) / thread.options.BlockSize)
-	buffer := make([]byte, thread.options.BlockSize*1024)
+func (thread *Thread) processFile(blockSize uint, writeRatio float64, randomRatio float64, ok chan int) {
+	randomRatioInt := int32(randomRatio * 100)
+	fileBlocks := int64((thread.options.FileSize * 1024) / blockSize)
+	buffer := make([]byte, blockSize*1024)
 	rand.Read(buffer)
 
-	log.Printf(fmt.Sprintf("thread %v: main loop, writeRatio=%.1f", thread.id, writeRatio))
+	log.Printf(fmt.Sprintf("thread %v: main loop, blockSize=%v, writeRatio=%.1f, randomRatio=%.1f", thread.id, blockSize, writeRatio, randomRatio))
 	var count uint64
 	var r int64
 	timeStart := time.Now()
 	for uint(time.Since(timeStart).Seconds()) < thread.options.Time {
 		for i := 0; i < 100; i++ {
-			if randomRatio >= rand.Int31n(100) {
+			if randomRatioInt >= rand.Int31n(100) {
 				r = rand.Int63n(fileBlocks)
 				if _, err := syscall.Seek(thread.fd, r*1024, 0); err != nil {
 					log.Fatal(fmt.Sprintf("thread %v seek error: %v", thread.id, err))
@@ -298,7 +340,7 @@ func (thread *Thread) processFile(writeRatio float64, ok chan int) {
 		}
 	}
 
-	thread.throughput = uint64((float64(count*uint64(thread.options.BlockSize)) / float64(1024)) / time.Since(timeStart).Seconds())
+	thread.throughput = uint64((float64(count*uint64(blockSize)) / float64(1024)) / time.Since(timeStart).Seconds())
 	log.Printf("thread %v: count=%v, time=%.1f, throughput=%v", thread.id, count, time.Since(timeStart).Seconds(), thread.throughput)
 	ok <- 1
 }

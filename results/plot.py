@@ -13,9 +13,44 @@ import sqlite3
 import os
 import json
 import matplotlib.pyplot as plt
+import numpy
 
 class Options:
 	format = 'pdf'
+
+class DBClass:
+	conn = sqlite3.connect(':memory:')
+	file_id = 0
+
+	def __init__(self):
+		cur = self.conn.cursor()
+		cur.execute('''CREATE TABLE files (
+			  file_id INT PRIMARY KEY, FileName TEXT,
+			  NumberOfFiles INT, FilesystemPercent INT, FileSize INT,
+			  Runs INT)''')
+		cur.execute('''CREATE TABLE data (
+			file_id INT, data_id INT, Time NUMERIC(10,1),
+			NumberOfFiles INT, FilesystemPercent INT, FileSize INT,
+			BlockSize INT, RandomRatio NUMERIC(2,1), WriteRatioThread0 NUMERIC(2,1),
+			WriteRatio NUMERIC(2,1), Total INT, Thread0 INT,
+			PRIMARY KEY(file_id, data_id))''')
+		self.conn.commit()
+
+	def getFileId(self):
+		ret = self.file_id
+		self.file_id += 1
+		return ret
+
+	def getCursor(self):
+		return self.conn.cursor()
+
+	def query(self, sql):
+		return self.conn.cursor().execute(sql)
+
+	def commit(self):
+		self.conn.commit()
+
+DB = DBClass()
 
 class Graphs:
 	filenames = None
@@ -25,13 +60,6 @@ class Graphs:
 	def __init__(self, path=None):
 		self.filenames = []
 		self.files = []
-		self.conn = sqlite3.connect(':memory:')
-		cur = self.conn.cursor()
-		cur.execute('CREATE TABLE files ('+
-			  'id INTEGER PRIMARY KEY, FileName TEXT, BlockSize INT, '+
-			  'NumberOfFiles INT, FilesystemPercent INT, FileSize INT, '+
-			  'Runs INT, WriteRatio NUMERIC(3,1), WriteRatioThread0 NUMERIC(3,1))')
-		idx = 0
 		if path is not None:
 			print("changing workdir to {}".format(path))
 			os.chdir(path)
@@ -40,10 +68,6 @@ class Graphs:
 				self.filenames.append(i)
 				f = File(i)
 				self.files.append(f)
-				cur.execute("INSERT INTO files VALUES ({}, '{}', {BlockSize}, {NumberOfFiles}, {FilesystemPercent}, {FileSize}, {Runs}, {WriteRatio}, {WriteRatioThread0})".format(
-					idx, i, **f.metadata))
-				idx = idx +1
-		self.conn.commit()
 
 	def printAll(self):
 		self.printFiles()
@@ -93,9 +117,6 @@ class Graphs:
 				fig2.savefig('aggregated-bs{}fsp{}{}-thread0.{format}'.format(row_group[0],row_group[1],filename_t0, format=Options.format))
 			plt.show()
 
-	def query(self, sql):
-		return self.conn.cursor().execute(sql)
-
 	def queryFiles(self, sql):
 		ret = []
 		for row_file in self.query(sql):
@@ -112,32 +133,15 @@ def tryConvert(value, *types):
 	return value
 
 class File:
+	id = None
 	metadata = None
-	data = None
-	data_time = None
-	data_writeratio = None
-	data_thread0 = None
-	data_total = None
-	def __init__(self, filename):
-		self.metadata = collections.OrderedDict()
-		self.metadata['FileName'] = filename
+	data_keys = ['Time', 'BlockSize', 'RandomRatio', 'WriteRatioThread0', 'WriteRatio', 'Total', 'Thread0']
 
-		self.data = []
-		self.data_time = []
-		self.data_writeratio = []
-		self.data_thread0 = []
-		self.data_total = []
-		with open(filename,newline='') as file:
-			reader = csv.reader(file, delimiter=',')
-			for row in reader:
-				aux = []
-				for col in row:
-					aux.append( tryConvert(col.strip(' '), int, float) )
-				self.data.append(aux)
-				self.data_time.append(aux[0])
-				self.data_writeratio.append(aux[2])
-				self.data_total.append(aux[3])
-				self.data_thread0.append(aux[4])
+	def __init__(self, filename):
+		self.id = DB.getFileId()
+		self.metadata = collections.OrderedDict()
+		self.metadata['file_id'] = self.id
+		self.metadata['FileName'] = filename
 
 		logfile = filename.replace('.csv', '.log')
 		with open(logfile,newline='') as file:
@@ -153,27 +157,68 @@ class File:
 		#for k, v in self.metadata.items():
 		#	print("{}: {}".format(k,v))
 
+		cur = DB.getCursor()
+		cur.execute('''INSERT INTO files
+			  VALUES ({}, '{FileName}', {NumberOfFiles}, {FilesystemPercent},
+			  {FileSize}, {Runs})'''.format(	self.id, **self.metadata))
+
+		data_dict = {
+			'file_id'          :self.id,
+			'data_id'          :0,
+			'NumberOfFiles'    :self.metadata['NumberOfFiles'],
+			'FilesystemPercent':self.metadata['FilesystemPercent'],
+			'FileSize'         :self.metadata['FileSize'],
+			}
+		with open(filename,newline='') as file:
+			reader = csv.reader(file, delimiter=',')
+			for row in reader:
+				for i in range(0, len(self.data_keys)):
+					data_dict[self.data_keys[i]] = tryConvert(row[i].strip(' '), int, float)
+
+				cur.execute('''INSERT INTO data VALUES(
+					{file_id}, {data_id}, {Time},
+					{NumberOfFiles}, {FilesystemPercent}, {FileSize},
+					{BlockSize}, {RandomRatio}, {WriteRatioThread0},
+					{WriteRatio}, {Total}, {Thread0})'''.format(**data_dict))
+				data_dict['data_id'] = data_dict['data_id'] + 1
+
+		DB.commit()
+
 	def print(self, save=False):
-		if self.metadata['Runs'] == 1:
+		'''
+		if self.metadata['WriteRatioThread0'] == 1:
 			self.printPerWriteRatio(save)
 		else:
-			self.printTelemetry(save)
+			self.printTelemetry(save)'''
 
 	def printPerWriteRatio(self, save=False):
-		fig, ax = plt.subplots()
-		fig.set_figheight(5)
-		ax.grid()
-		ax.plot(self.data_writeratio, self.data_total,   '-', lw=1, color='blue', label='total')
-		ax.plot(self.data_writeratio, self.data_thread0, '-', lw=1, color='orange', label='thread0')
-		xlabel = 'writes/reads{}'.format('' if self.metadata['WriteRatioThread0'] == -1 else ' (other threads)')
-		title_t0 = '' if self.metadata['WriteRatioThread0'] == -1 else '(w/r={})'.format(self.metadata['WriteRatioThread0'])
-		ax.set(title='thread0{title_t0}: bs={BlockSize}, fs%={FilesystemPercent}, threads={NumberOfFiles}'.format(
-			title_t0=title_t0, **self.metadata
-			), xlabel=xlabel, ylabel='MiB/s')
-		ax.legend(loc='best', ncol=1, frameon=True)
-		if save:
-			fig.savefig(self.metadata['FileName'].replace('.csv', '.{}'.format(Options.format)))
-		plt.show()
+		for bs in self.metadata['BlockSize']:
+			fig, ax = plt.subplots()
+			fig.set_figheight(5)
+			ax.grid()
+
+			colors = ['blue', 'orange', 'green', 'red']
+			ci = 0
+			for rr in [0, 0.5, 1]:
+				q = DB.query('''SELECT WriteRatio, AVG(Total), AVG(Thread0)
+					   FROM data
+					   WHERE file_id = {} AND BlockSize = {} AND RandomRatio = {}
+						   AND WriteRatio = WriteRatioThread0
+					   GROUP BY WriteRatio ORDER BY WriteRatio'''.format(self.id, bs, rr))
+				A = numpy.array(q.fetchall()).T
+				ax.plot(A[0], A[1], '-', color=colors[ci], lw=1, label='total (rr={})'.format(rr))
+				ax.plot(A[0], A[2], '.-', color=colors[ci], lw=1, label='thread0 (rr={})'.format(rr))
+				ci += 1
+
+			ax.set(title='bs={bs}, fs%={FilesystemPercent}, threads={NumberOfFiles}'.format(
+				bs=bs, **self.metadata
+				), xlabel='writes/reads', ylabel='MiB/s')
+			ax.legend(loc='best', ncol=1, frameon=True)
+
+			if save:
+				save_name = '{}-bs{}.{}'.format(self.metadata['FileName'].replace('.csv', ''), bs, Options.format)
+				fig.savefig(save_name)
+			plt.show()
 
 	def printTelemetry(self, save=False):
 		fig, ax = plt.subplots()
@@ -192,3 +237,5 @@ class File:
 
 
 g = Graphs()
+#f = File('perc10files1.csv')
+#f.printPerWriteRatio(True)
