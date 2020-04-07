@@ -227,13 +227,13 @@ class File:
 			self.printTelemetry(save)'''
 
 	def printPerWriteRatio(self, save=False, printsql=False):
-		for bs in self.metadata['BlockSize']:
-			fig, ax = plt.subplots()
-			fig.set_figheight(5)
-			ax.grid()
+		ci = 0
+		colors = plt.get_cmap('tab10').colors
+		fig, ax = plt.subplots()
+		fig.set_figheight(5)
+		ax.grid()
 
-			colors = ['blue', 'orange', 'green']
-			ci = 0
+		for bs in self.metadata['BlockSize']:
 			for rr in [0, 0.5, 1]:
 				q = DB.query('''SELECT WriteRatio, AVG(Total), AVG(Thread0)
 					FROM data
@@ -242,19 +242,23 @@ class File:
 					GROUP BY WriteRatio ORDER BY WriteRatio'''.format(self.id, bs, rr),
 					printsql=printsql)
 				A = numpy.array(q.fetchall()).T
-				ax.plot(A[0], A[1], '-', color=colors[ci], lw=1, label='total (rand {}%)'.format(int(rr*100)))
-				ax.plot(A[0], A[2], '.-', color=colors[ci], lw=1, label='thread0 (rand {}%)'.format(int(rr*100)))
+				ax.plot(A[0], A[1], '-', color=colors[ci], lw=1, label='total: bs={}, rand {}%'.format(bs, int(rr*100)))
+				ax.plot(A[0], A[2], '.-', color=colors[ci], lw=1, label='thread0: bs={}, rand {}%'.format(bs, int(rr*100)))
 				ci += 1
 
-			ax.set(title='bs={bs}, fs%={FilesystemPercent}, threads={NumberOfFiles}'.format(
-				bs=bs, **self.metadata
-				), xlabel='writes/reads', ylabel='MiB/s')
-			ax.legend(loc='best', ncol=1, frameon=True)
+		ax.set(title='fs%={FilesystemPercent}, threads={NumberOfFiles}'.format(
+			**self.metadata
+			), xlabel='writes/reads', ylabel='MiB/s')
 
-			if save:
-				save_name = '{}-bs{}.{}'.format(self.metadata['FileName'].replace('.csv', ''), bs, Options.format)
-				fig.savefig(save_name)
-			plt.show()
+		chartBox = ax.get_position()
+		ax.set_position([chartBox.x0, chartBox.y0, chartBox.width*0.7, chartBox.height])
+		ax.legend(loc='upper center', bbox_to_anchor=(1.45, 0.9), title='threads', ncol=1, frameon=True)
+		#ax.legend(loc='best', ncol=1, frameon=True)
+
+		if save:
+			save_name = '{}.{}'.format(self.metadata['FileName'].replace('.csv', ''), Options.format)
+			fig.savefig(save_name)
+		plt.show()
 
 	def printTelemetry(self, save=False):
 		'''
@@ -274,6 +278,6 @@ class File:
 		'''
 
 
-g = Graphs('exp3')
-#f = File('perc10files1.csv')
-#f.printPerWriteRatio(True)
+g = Graphs('exp5')
+f = g.getFile('perc10files10.csv')
+f.printPerWriteRatio()

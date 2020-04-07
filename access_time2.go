@@ -10,6 +10,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"sync"
 	"syscall"
 	"time"
 )
@@ -17,7 +18,7 @@ import (
 type ratioArray []float64
 type uintArray []uint
 
-type Options struct {
+type optionsType struct {
 	Directory            string
 	FileSize             uint
 	FilesystemPercent    uint
@@ -71,8 +72,8 @@ func (self *ratioArray) Set(value string) error {
 	return nil
 }
 
-func parseArgs() (*Options, *syscall.Statfs_t) {
-	var options Options
+func parseArgs() (*optionsType, *syscall.Statfs_t) {
+	var options optionsType
 	flag.StringVar(&options.Directory, "directory", "", "working directory")
 	flag.UintVar(&options.FileSize, "file-size", 100, "file size (MB)")
 	flag.UintVar(&options.FilesystemPercent, "filesystem-percent", 0, "percent of the filesystem used in the experiment (override file-size)")
@@ -103,10 +104,10 @@ func parseArgs() (*Options, *syscall.Statfs_t) {
 		options.BlockSize = []uint{1024}
 	}
 	if len(options.WriteRatio) < 1 {
-		options.WriteRatio = []float64{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0}
+		options.WriteRatio = []float64{0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0}
 	}
 	if len(options.RandomRatio) < 1 {
-		options.RandomRatio = []float64{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0}
+		options.RandomRatio = []float64{0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0}
 	}
 	if options.NumberOfFiles < 1 {
 		log.Fatal("--number-of-files must be > 0")
@@ -158,13 +159,13 @@ func parseArgs() (*Options, *syscall.Statfs_t) {
 }
 
 func main() {
+	var wg sync.WaitGroup
 	options, statfs := parseArgs()
-	ok := make(chan int)
-	threads := make([]*Thread, options.NumberOfFiles)
+	threads := make([]*threadType, options.NumberOfFiles)
 
 	////// Creating data for the Threads and creating files //////
 	for i := uint(0); i < options.NumberOfFiles; i++ {
-		t := NewThread(i, fmt.Sprintf("%v/%v", options.Directory, i), options, statfs)
+		t := newThread(i, fmt.Sprintf("%v/%v", options.Directory, i), options, statfs)
 		threads[i] = t
 		if options.ExperimentModeCreate {
 			t.createFile()
@@ -176,29 +177,26 @@ func main() {
 	if options.ExperimentModeRun {
 		////// Experiment Loop //////
 		timeStart := time.Now()
-		var r float64
 		var ratiosThread0 ratioArray
-		for _, ratio := range options.WriteRatio {
-			if len(options.WriteRatioThread0) == 0 {
-				ratiosThread0 = ratioArray{ratio}
-			} else {
-				ratiosThread0 = options.WriteRatioThread0
-			}
-			for _, ratioT0 := range ratiosThread0 {
-				for _, blockSize := range options.BlockSize {
-					for _, randomRatio := range options.RandomRatio {
+		for _, blockSize := range options.BlockSize {
+			for _, randomRatio := range options.RandomRatio {
+				for _, ratio := range options.WriteRatio {
+					if len(options.WriteRatioThread0) == 0 {
+						ratiosThread0 = ratioArray{ratio}
+					} else {
+						ratiosThread0 = options.WriteRatioThread0
+					}
+					for _, ratioT0 := range ratiosThread0 {
 						for runs := uint(0); runs < options.Runs; runs++ {
 							for i, t := range threads {
+								wg.Add(1)
 								if i == 0 {
-									r = ratioT0
+									go t.worker(blockSize, ratioT0, randomRatio, &wg)
 								} else {
-									r = ratio
+									go t.worker(blockSize, ratio, randomRatio, &wg)
 								}
-								go t.processFile(blockSize, r, randomRatio, ok)
 							}
-							for range threads {
-								<-ok
-							}
+							wg.Wait()
 							// Print Results: //
 							fmt.Printf("%.2f, %v, %.1f, %.1f, %.1f",
 								time.Since(timeStart).Seconds(), blockSize, randomRatio, ratioT0, ratio)
@@ -237,17 +235,17 @@ func getFilesystemStats(path string) *syscall.Statfs_t {
 	return &stats
 }
 
-type Thread struct {
+type threadType struct {
 	id         uint
-	options    *Options
+	options    *optionsType
 	statfs     *syscall.Statfs_t
 	filename   string
 	fd         int
 	throughput uint64 // MB/sec
 }
 
-func NewThread(id uint, filename string, options *Options, statfs *syscall.Statfs_t) *Thread {
-	var ret Thread
+func newThread(id uint, filename string, options *optionsType, statfs *syscall.Statfs_t) *threadType {
+	var ret threadType
 	ret.id = id
 	ret.filename = filename
 	ret.options = options
@@ -255,15 +253,15 @@ func NewThread(id uint, filename string, options *Options, statfs *syscall.Statf
 	return &ret
 }
 
-func (thread *Thread) createFile() {
+func (thread *threadType) createFile() {
 	log.Printf("thread %v: Creating file %v", thread.id, thread.filename)
 	fd, err := syscall.Open(thread.filename, syscall.O_CREAT|syscall.O_RDWR|syscall.O_DIRECT, 0600)
 	if err != nil {
 		log.Fatal(fmt.Sprintf("thread %v: Error creating file %v: %v", thread.id, thread.filename, err))
 	}
-	buffer := make([]byte, 1024*1024)
+	buffer := make([]byte, 2*1024*1024)
 	rand.Read(buffer)
-	for i := uint(0); i < thread.options.FileSize; i++ {
+	for i := uint(0); i < thread.options.FileSize; i += 2 {
 		if _, err := syscall.Write(fd, buffer); err != nil {
 			log.Fatal(fmt.Sprintf("thread %v: Error writing file %v: %v", thread.id, thread.filename, err))
 		}
@@ -274,7 +272,7 @@ func (thread *Thread) createFile() {
 	thread.fd = fd
 }
 
-func (thread *Thread) openFile() {
+func (thread *threadType) openFile() {
 	var stats syscall.Stat_t
 	log.Printf("thread %v: Creating file %v", thread.id, thread.filename)
 	fd, err := syscall.Open(thread.filename, syscall.O_RDWR|syscall.O_DIRECT, 0600)
@@ -291,7 +289,7 @@ func (thread *Thread) openFile() {
 	thread.fd = fd
 }
 
-func (thread *Thread) removeFile() {
+func (thread *threadType) removeFile() {
 	log.Printf("thread %v: closing file %v", thread.id, thread.filename)
 	if err := syscall.Close(thread.fd); err != nil {
 		log.Fatal(fmt.Sprintf("thread %v: Error closing file %v: %v", thread.id, thread.filename, err))
@@ -302,7 +300,9 @@ func (thread *Thread) removeFile() {
 	}
 }
 
-func (thread *Thread) processFile(blockSize uint, writeRatio float64, randomRatio float64, ok chan int) {
+func (thread *threadType) worker(blockSize uint, writeRatio float64, randomRatio float64, wg *sync.WaitGroup) {
+	defer wg.Done()
+
 	randomRatioInt := int32(randomRatio * 100)
 	fileBlocks := int64((thread.options.FileSize * 1024) / blockSize)
 	buffer := make([]byte, blockSize*1024)
@@ -342,5 +342,4 @@ func (thread *Thread) processFile(blockSize uint, writeRatio float64, randomRati
 
 	thread.throughput = uint64((float64(count*uint64(blockSize)) / float64(1024)) / time.Since(timeStart).Seconds())
 	log.Printf("thread %v: count=%v, time=%.1f, throughput=%v", thread.id, count, time.Since(timeStart).Seconds(), thread.throughput)
-	ok <- 1
 }
