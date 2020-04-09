@@ -220,17 +220,17 @@ class File:
 		DB.commit()
 
 	def print(self, save=False):
-		'''
-		if self.metadata['WriteRatioThread0'] == 1:
+		if self.metadata['WriteRatioThread0'] is None:
 			self.printPerWriteRatio(save)
 		else:
-			self.printTelemetry(save)'''
+			self.printTelemetry(save)
 
 	def printPerWriteRatio(self, save=False, printsql=False):
 		ci = 0
 		colors = plt.get_cmap('tab10').colors
 		fig, ax = plt.subplots()
 		fig.set_figheight(5)
+		fig.set_figwidth(8)
 		ax.grid()
 
 		for bs in self.metadata['BlockSize']:
@@ -242,8 +242,8 @@ class File:
 					GROUP BY WriteRatio ORDER BY WriteRatio'''.format(self.id, bs, rr),
 					printsql=printsql)
 				A = numpy.array(q.fetchall()).T
-				ax.plot(A[0], A[1], '-', color=colors[ci], lw=1, label='total: bs={}, rand {}%'.format(bs, int(rr*100)))
-				ax.plot(A[0], A[2], '.-', color=colors[ci], lw=1, label='thread0: bs={}, rand {}%'.format(bs, int(rr*100)))
+				ax.plot(A[0], A[1], '-', color=colors[ci], lw=1, label='bs={}, rand {}%, total'.format(bs, int(rr*100)))
+				ax.plot(A[0], A[2], '.-', color=colors[ci], lw=1, label='bs={}, rand {}%, thread0'.format(bs, int(rr*100)))
 				ci += 1
 
 		ax.set(title='fs%={FilesystemPercent}, threads={NumberOfFiles}'.format(
@@ -251,8 +251,8 @@ class File:
 			), xlabel='writes/reads', ylabel='MiB/s')
 
 		chartBox = ax.get_position()
-		ax.set_position([chartBox.x0, chartBox.y0, chartBox.width*0.7, chartBox.height])
-		ax.legend(loc='upper center', bbox_to_anchor=(1.45, 0.9), title='threads', ncol=1, frameon=True)
+		ax.set_position([chartBox.x0, chartBox.y0, chartBox.width*0.65, chartBox.height])
+		ax.legend(loc='upper center', bbox_to_anchor=(1.35, 0.9), title='threads', ncol=1, frameon=True)
 		#ax.legend(loc='best', ncol=1, frameon=True)
 
 		if save:
@@ -278,6 +278,6 @@ class File:
 		'''
 
 
-g = Graphs('exp5')
-f = g.getFile('perc10files10.csv')
-f.printPerWriteRatio()
+g = Graphs('exp6-debian')
+f = g.getFile('perc30files2.csv')
+f.printPerWriteRatio(True)
