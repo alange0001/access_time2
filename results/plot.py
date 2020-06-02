@@ -226,14 +226,14 @@ class File:
 			self.printTelemetry(save)
 
 	def printPerWriteRatio(self, save=False, printsql=False):
-		ci = 0
 		colors = plt.get_cmap('tab10').colors
-		fig, ax = plt.subplots()
-		fig.set_figheight(5)
-		fig.set_figwidth(8)
-		ax.grid()
 
 		for bs in self.metadata['BlockSize']:
+			ci = 0
+			fig, ax = plt.subplots()
+			fig.set_figheight(5)
+			fig.set_figwidth(8)
+			ax.grid()
 			for rr in [0, 0.5, 1]:
 				q = DB.query('''SELECT WriteRatio, AVG(Total), AVG(Thread0)
 					FROM data
@@ -246,19 +246,19 @@ class File:
 				ax.plot(A[0], A[2], '.-', color=colors[ci], lw=1, label='bs={}, rand {}%, thread0'.format(bs, int(rr*100)))
 				ci += 1
 
-		ax.set(title='fs%={FilesystemPercent}, threads={NumberOfFiles}'.format(
-			**self.metadata
-			), xlabel='writes/reads', ylabel='MiB/s')
+			ax.set(title='fs%={FilesystemPercent}, threads={NumberOfFiles}'.format(
+				**self.metadata
+				), xlabel='writes/reads', ylabel='MiB/s')
 
-		chartBox = ax.get_position()
-		ax.set_position([chartBox.x0, chartBox.y0, chartBox.width*0.65, chartBox.height])
-		ax.legend(loc='upper center', bbox_to_anchor=(1.35, 0.9), title='threads', ncol=1, frameon=True)
-		#ax.legend(loc='best', ncol=1, frameon=True)
+			chartBox = ax.get_position()
+			ax.set_position([chartBox.x0, chartBox.y0, chartBox.width*0.65, chartBox.height])
+			ax.legend(loc='upper center', bbox_to_anchor=(1.35, 0.9), title='threads', ncol=1, frameon=True)
+			#ax.legend(loc='best', ncol=1, frameon=True)
 
-		if save:
-			save_name = '{}.{}'.format(self.metadata['FileName'].replace('.csv', ''), Options.format)
-			fig.savefig(save_name)
-		plt.show()
+			if save:
+				save_name = '{}-bs{}.{}'.format(self.metadata['FileName'].replace('.csv', ''), bs, Options.format)
+				fig.savefig(save_name)
+			plt.show()
 
 	def printTelemetry(self, save=False):
 		'''
@@ -278,6 +278,8 @@ class File:
 		'''
 
 
-g = Graphs('exp6-debian')
-f = g.getFile('perc30files2.csv')
-f.printPerWriteRatio(True)
+g = Graphs('exp7-ubuntu')
+Options.format = 'png'
+g.printAll()
+Options.format = 'pdf'
+g.printAll()
