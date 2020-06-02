@@ -1,0 +1,2106 @@
+2020/06/02 02:17:20 Options Received: {"Directory":"/media/auto/work/tmp","FileSize":100,"FilesystemPercent":80,"NumberOfFiles":2,"BlockSize":[4,8,128,256,512],"WriteRatio":null,"WriteRatioThread0":null,"RandomRatio":[0,0.5,1],"Time":3,"Runs":5,"ExperimentMode":"run","ExperimentModeCreate":false,"ExperimentModeRun":false,"ExperimentModeRemove":false}
+2020/06/02 02:17:20 Filesystem data: type=61267, block_size=4096, blocks=119917488, blocks_free=23965596, blocks_available=17856681
+2020/06/02 02:17:20 filesystem-percent defined to 80%. Overriding file-size to 187370
+2020/06/02 02:17:20 Options Processed: {"Directory":"/media/auto/work/tmp","FileSize":187370,"FilesystemPercent":80,"NumberOfFiles":2,"BlockSize":[4,8,128,256,512],"WriteRatio":[0,0.2,0.4,0.5,0.6,0.8,1],"WriteRatioThread0":null,"RandomRatio":[0,0.5,1],"Time":3,"Runs":5,"ExperimentMode":"run","ExperimentModeCreate":false,"ExperimentModeRun":true,"ExperimentModeRemove":false}
+2020/06/02 02:17:20 thread 0: Creating file /media/auto/work/tmp/0
+2020/06/02 02:17:20 thread 1: Creating file /media/auto/work/tmp/1
+2020/06/02 02:17:20 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:17:20 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:17:23 thread 0: count=65700, time=3.0, throughput=85
+2020/06/02 02:17:23 thread 1: count=58800, time=3.0, throughput=76
+2020/06/02 02:17:23 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:17:23 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:17:26 thread 1: count=60400, time=3.0, throughput=78
+2020/06/02 02:17:26 thread 0: count=60400, time=3.0, throughput=78
+2020/06/02 02:17:26 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:17:26 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:17:29 thread 1: count=61500, time=3.0, throughput=80
+2020/06/02 02:17:29 thread 0: count=62400, time=3.0, throughput=81
+2020/06/02 02:17:29 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:17:29 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:17:32 thread 1: count=62600, time=3.0, throughput=81
+2020/06/02 02:17:32 thread 0: count=62300, time=3.0, throughput=81
+2020/06/02 02:17:32 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:17:32 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:17:35 thread 1: count=58800, time=3.0, throughput=76
+2020/06/02 02:17:35 thread 0: count=61600, time=3.0, throughput=80
+2020/06/02 02:17:35 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:17:35 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:17:38 thread 1: count=45100, time=3.0, throughput=58
+2020/06/02 02:17:38 thread 0: count=46200, time=3.0, throughput=60
+2020/06/02 02:17:38 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:17:38 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:17:41 thread 1: count=45900, time=3.0, throughput=59
+2020/06/02 02:17:41 thread 0: count=44900, time=3.0, throughput=58
+2020/06/02 02:17:41 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:17:41 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:17:44 thread 1: count=44700, time=3.0, throughput=58
+2020/06/02 02:17:44 thread 0: count=46300, time=3.0, throughput=60
+2020/06/02 02:17:44 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:17:44 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:17:47 thread 0: count=45900, time=3.0, throughput=59
+2020/06/02 02:17:47 thread 1: count=45500, time=3.0, throughput=59
+2020/06/02 02:17:47 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:17:47 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:17:50 thread 0: count=46400, time=3.0, throughput=60
+2020/06/02 02:17:50 thread 1: count=44800, time=3.0, throughput=58
+2020/06/02 02:17:50 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:17:50 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:17:53 thread 0: count=42800, time=3.0, throughput=55
+2020/06/02 02:17:53 thread 1: count=42900, time=3.0, throughput=55
+2020/06/02 02:17:53 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:17:53 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:17:56 thread 1: count=43000, time=3.0, throughput=55
+2020/06/02 02:17:56 thread 0: count=42600, time=3.0, throughput=55
+2020/06/02 02:17:56 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:17:56 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:17:59 thread 1: count=43100, time=3.0, throughput=56
+2020/06/02 02:17:59 thread 0: count=42800, time=3.0, throughput=55
+2020/06/02 02:17:59 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:17:59 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:18:02 thread 1: count=43700, time=3.0, throughput=56
+2020/06/02 02:18:02 thread 0: count=42600, time=3.0, throughput=55
+2020/06/02 02:18:02 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:18:02 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:18:05 thread 0: count=42800, time=3.0, throughput=55
+2020/06/02 02:18:05 thread 1: count=42600, time=3.0, throughput=55
+2020/06/02 02:18:05 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:18:05 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:18:08 thread 0: count=46800, time=3.0, throughput=60
+2020/06/02 02:18:08 thread 1: count=47100, time=3.0, throughput=61
+2020/06/02 02:18:08 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:18:08 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:18:11 thread 1: count=47200, time=3.0, throughput=61
+2020/06/02 02:18:11 thread 0: count=47100, time=3.0, throughput=61
+2020/06/02 02:18:11 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:18:11 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:18:14 thread 1: count=46400, time=3.0, throughput=60
+2020/06/02 02:18:14 thread 0: count=46700, time=3.0, throughput=60
+2020/06/02 02:18:14 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:18:14 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:18:17 thread 0: count=46400, time=3.0, throughput=60
+2020/06/02 02:18:17 thread 1: count=46400, time=3.0, throughput=60
+2020/06/02 02:18:17 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:18:17 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:18:20 thread 0: count=46400, time=3.0, throughput=60
+2020/06/02 02:18:20 thread 1: count=46700, time=3.0, throughput=60
+2020/06/02 02:18:20 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:18:20 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:18:23 thread 1: count=54100, time=3.0, throughput=70
+2020/06/02 02:18:23 thread 0: count=53800, time=3.0, throughput=70
+2020/06/02 02:18:23 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:18:23 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:18:26 thread 1: count=54000, time=3.0, throughput=70
+2020/06/02 02:18:26 thread 0: count=53900, time=3.0, throughput=70
+2020/06/02 02:18:26 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:18:26 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:18:29 thread 1: count=52800, time=3.0, throughput=68
+2020/06/02 02:18:29 thread 0: count=53500, time=3.0, throughput=69
+2020/06/02 02:18:29 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:18:29 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:18:32 thread 1: count=52400, time=3.0, throughput=68
+2020/06/02 02:18:32 thread 0: count=52200, time=3.0, throughput=67
+2020/06/02 02:18:32 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:18:32 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:18:35 thread 1: count=32800, time=3.0, throughput=42
+2020/06/02 02:18:35 thread 0: count=33700, time=3.0, throughput=43
+2020/06/02 02:18:35 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:18:35 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:18:38 thread 0: count=41800, time=3.0, throughput=54
+2020/06/02 02:18:38 thread 1: count=42300, time=3.0, throughput=55
+2020/06/02 02:18:38 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:18:38 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:18:41 thread 0: count=41400, time=3.0, throughput=53
+2020/06/02 02:18:41 thread 1: count=43600, time=3.0, throughput=56
+2020/06/02 02:18:41 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:18:41 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:18:44 thread 1: count=42200, time=3.0, throughput=54
+2020/06/02 02:18:44 thread 0: count=42200, time=3.0, throughput=54
+2020/06/02 02:18:44 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:18:44 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:18:47 thread 0: count=41600, time=3.0, throughput=54
+2020/06/02 02:18:47 thread 1: count=42400, time=3.0, throughput=55
+2020/06/02 02:18:47 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:18:47 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:18:50 thread 1: count=43800, time=3.0, throughput=56
+2020/06/02 02:18:50 thread 0: count=43000, time=3.0, throughput=55
+2020/06/02 02:18:50 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:18:50 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:18:53 thread 0: count=184600, time=3.0, throughput=240
+2020/06/02 02:18:53 thread 1: count=184900, time=3.0, throughput=240
+2020/06/02 02:18:53 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:18:53 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:18:56 thread 0: count=184600, time=3.0, throughput=240
+2020/06/02 02:18:56 thread 1: count=182900, time=3.0, throughput=238
+2020/06/02 02:18:56 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:18:56 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:18:59 thread 1: count=187300, time=3.0, throughput=243
+2020/06/02 02:18:59 thread 0: count=185900, time=3.0, throughput=241
+2020/06/02 02:18:59 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:18:59 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:19:02 thread 1: count=184300, time=3.0, throughput=239
+2020/06/02 02:19:02 thread 0: count=183500, time=3.0, throughput=238
+2020/06/02 02:19:02 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:19:02 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:19:05 thread 0: count=180800, time=3.0, throughput=235
+2020/06/02 02:19:05 thread 1: count=178600, time=3.0, throughput=232
+2020/06/02 02:19:05 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:19:05 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:19:08 thread 1: count=32600, time=3.0, throughput=42
+2020/06/02 02:19:08 thread 0: count=32700, time=3.0, throughput=42
+2020/06/02 02:19:08 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:19:08 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:19:11 thread 1: count=32700, time=3.0, throughput=42
+2020/06/02 02:19:11 thread 0: count=32800, time=3.0, throughput=42
+2020/06/02 02:19:11 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:19:11 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:19:14 thread 1: count=32900, time=3.0, throughput=42
+2020/06/02 02:19:14 thread 0: count=32900, time=3.0, throughput=42
+2020/06/02 02:19:14 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:19:14 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:19:17 thread 1: count=32700, time=3.0, throughput=42
+2020/06/02 02:19:17 thread 0: count=32800, time=3.0, throughput=42
+2020/06/02 02:19:17 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:19:17 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:19:20 thread 0: count=32800, time=3.0, throughput=42
+2020/06/02 02:19:20 thread 1: count=32700, time=3.0, throughput=42
+2020/06/02 02:19:20 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:19:20 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:19:24 thread 0: count=26700, time=3.0, throughput=34
+2020/06/02 02:19:24 thread 1: count=26400, time=3.0, throughput=34
+2020/06/02 02:19:24 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:19:24 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:19:27 thread 1: count=26800, time=3.0, throughput=34
+2020/06/02 02:19:27 thread 0: count=27000, time=3.0, throughput=35
+2020/06/02 02:19:27 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:19:27 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:19:30 thread 0: count=26700, time=3.0, throughput=34
+2020/06/02 02:19:30 thread 1: count=27300, time=3.0, throughput=35
+2020/06/02 02:19:30 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:19:30 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:19:33 thread 1: count=26800, time=3.0, throughput=34
+2020/06/02 02:19:33 thread 0: count=26700, time=3.0, throughput=34
+2020/06/02 02:19:33 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:19:33 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:19:36 thread 1: count=25900, time=3.0, throughput=33
+2020/06/02 02:19:36 thread 0: count=25400, time=3.0, throughput=33
+2020/06/02 02:19:36 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:19:36 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:19:39 thread 1: count=25300, time=3.0, throughput=32
+2020/06/02 02:19:39 thread 0: count=25200, time=3.0, throughput=32
+2020/06/02 02:19:39 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:19:39 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:19:42 thread 1: count=25300, time=3.0, throughput=32
+2020/06/02 02:19:42 thread 0: count=25400, time=3.0, throughput=32
+2020/06/02 02:19:42 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:19:42 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:19:45 thread 0: count=25000, time=3.0, throughput=32
+2020/06/02 02:19:45 thread 1: count=24800, time=3.0, throughput=32
+2020/06/02 02:19:45 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:19:45 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:19:48 thread 1: count=25400, time=3.0, throughput=32
+2020/06/02 02:19:48 thread 0: count=25100, time=3.0, throughput=32
+2020/06/02 02:19:48 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:19:48 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:19:51 thread 0: count=24600, time=3.0, throughput=31
+2020/06/02 02:19:51 thread 1: count=23900, time=3.0, throughput=31
+2020/06/02 02:19:51 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:19:51 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:19:54 thread 0: count=25800, time=3.0, throughput=33
+2020/06/02 02:19:54 thread 1: count=25600, time=3.0, throughput=33
+2020/06/02 02:19:54 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:19:54 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:19:57 thread 1: count=25900, time=3.0, throughput=33
+2020/06/02 02:19:57 thread 0: count=26000, time=3.0, throughput=33
+2020/06/02 02:19:57 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:19:57 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:20:00 thread 1: count=24400, time=3.0, throughput=31
+2020/06/02 02:20:00 thread 0: count=25200, time=3.0, throughput=32
+2020/06/02 02:20:00 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:20:00 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:20:03 thread 1: count=26000, time=3.0, throughput=33
+2020/06/02 02:20:03 thread 0: count=26500, time=3.0, throughput=34
+2020/06/02 02:20:03 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:20:03 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:20:06 thread 1: count=25100, time=3.0, throughput=32
+2020/06/02 02:20:06 thread 0: count=25700, time=3.0, throughput=33
+2020/06/02 02:20:06 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:20:06 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:20:09 thread 1: count=27400, time=3.0, throughput=35
+2020/06/02 02:20:09 thread 0: count=26600, time=3.0, throughput=34
+2020/06/02 02:20:09 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:20:09 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:20:12 thread 1: count=27100, time=3.0, throughput=35
+2020/06/02 02:20:12 thread 0: count=27800, time=3.0, throughput=36
+2020/06/02 02:20:12 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:20:12 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:20:15 thread 0: count=26800, time=3.0, throughput=34
+2020/06/02 02:20:15 thread 1: count=27100, time=3.0, throughput=35
+2020/06/02 02:20:15 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:20:15 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:20:18 thread 0: count=27200, time=3.0, throughput=35
+2020/06/02 02:20:18 thread 1: count=27000, time=3.0, throughput=35
+2020/06/02 02:20:18 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:20:18 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:20:21 thread 0: count=26400, time=3.0, throughput=34
+2020/06/02 02:20:21 thread 1: count=26900, time=3.0, throughput=34
+2020/06/02 02:20:21 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:20:21 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:20:24 thread 0: count=33900, time=3.0, throughput=44
+2020/06/02 02:20:24 thread 1: count=34700, time=3.0, throughput=45
+2020/06/02 02:20:24 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:20:24 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:20:27 thread 1: count=34700, time=3.0, throughput=45
+2020/06/02 02:20:27 thread 0: count=34700, time=3.0, throughput=45
+2020/06/02 02:20:27 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:20:27 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:20:30 thread 1: count=33400, time=3.0, throughput=43
+2020/06/02 02:20:30 thread 0: count=34500, time=3.0, throughput=44
+2020/06/02 02:20:30 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:20:30 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:20:33 thread 1: count=35000, time=3.0, throughput=45
+2020/06/02 02:20:33 thread 0: count=35500, time=3.0, throughput=46
+2020/06/02 02:20:33 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:20:33 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:20:36 thread 1: count=35100, time=3.0, throughput=45
+2020/06/02 02:20:36 thread 0: count=34700, time=3.0, throughput=45
+2020/06/02 02:20:36 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:20:36 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:20:39 thread 0: count=111600, time=3.0, throughput=145
+2020/06/02 02:20:39 thread 1: count=111500, time=3.0, throughput=145
+2020/06/02 02:20:39 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:20:39 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:20:42 thread 1: count=110200, time=3.0, throughput=143
+2020/06/02 02:20:42 thread 0: count=109800, time=3.0, throughput=142
+2020/06/02 02:20:42 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:20:42 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:20:45 thread 0: count=109900, time=3.0, throughput=143
+2020/06/02 02:20:45 thread 1: count=109600, time=3.0, throughput=142
+2020/06/02 02:20:45 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:20:45 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:20:48 thread 0: count=110900, time=3.0, throughput=144
+2020/06/02 02:20:48 thread 1: count=111300, time=3.0, throughput=144
+2020/06/02 02:20:48 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:20:48 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:20:51 thread 1: count=110300, time=3.0, throughput=143
+2020/06/02 02:20:51 thread 0: count=110200, time=3.0, throughput=143
+2020/06/02 02:20:51 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:20:51 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:20:54 thread 1: count=35300, time=3.0, throughput=45
+2020/06/02 02:20:54 thread 0: count=35400, time=3.0, throughput=45
+2020/06/02 02:20:54 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:20:54 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:20:57 thread 0: count=35400, time=3.0, throughput=46
+2020/06/02 02:20:57 thread 1: count=35400, time=3.0, throughput=46
+2020/06/02 02:20:57 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:20:57 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:21:00 thread 1: count=35400, time=3.0, throughput=46
+2020/06/02 02:21:00 thread 0: count=35500, time=3.0, throughput=46
+2020/06/02 02:21:00 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:21:00 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:21:03 thread 0: count=35600, time=3.0, throughput=46
+2020/06/02 02:21:03 thread 1: count=35500, time=3.0, throughput=46
+2020/06/02 02:21:03 thread 1: main loop, blockSize=4, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:21:03 thread 0: main loop, blockSize=4, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:21:06 thread 0: count=35600, time=3.0, throughput=46
+2020/06/02 02:21:06 thread 1: count=35500, time=3.0, throughput=46
+2020/06/02 02:21:06 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:21:06 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:21:09 thread 0: count=26500, time=3.0, throughput=34
+2020/06/02 02:21:09 thread 1: count=27000, time=3.0, throughput=35
+2020/06/02 02:21:09 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:21:09 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:21:12 thread 0: count=27800, time=3.0, throughput=36
+2020/06/02 02:21:12 thread 1: count=27600, time=3.0, throughput=35
+2020/06/02 02:21:12 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:21:12 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:21:15 thread 1: count=26700, time=3.0, throughput=34
+2020/06/02 02:21:15 thread 0: count=26900, time=3.0, throughput=34
+2020/06/02 02:21:15 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:21:15 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:21:18 thread 0: count=26700, time=3.0, throughput=34
+2020/06/02 02:21:18 thread 1: count=26700, time=3.0, throughput=34
+2020/06/02 02:21:18 thread 0: main loop, blockSize=4, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:21:18 thread 1: main loop, blockSize=4, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:21:21 thread 0: count=26800, time=3.0, throughput=34
+2020/06/02 02:21:21 thread 1: count=26800, time=3.0, throughput=34
+2020/06/02 02:21:21 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:21:21 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:21:24 thread 0: count=25000, time=3.0, throughput=32
+2020/06/02 02:21:24 thread 1: count=24900, time=3.0, throughput=32
+2020/06/02 02:21:24 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:21:24 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:21:27 thread 1: count=24700, time=3.0, throughput=32
+2020/06/02 02:21:27 thread 0: count=24600, time=3.0, throughput=31
+2020/06/02 02:21:27 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:21:27 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:21:30 thread 0: count=25100, time=3.0, throughput=32
+2020/06/02 02:21:30 thread 1: count=24600, time=3.0, throughput=31
+2020/06/02 02:21:30 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:21:30 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:21:33 thread 0: count=25300, time=3.0, throughput=32
+2020/06/02 02:21:33 thread 1: count=24900, time=3.0, throughput=32
+2020/06/02 02:21:33 thread 1: main loop, blockSize=4, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:21:33 thread 0: main loop, blockSize=4, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:21:36 thread 0: count=25100, time=3.0, throughput=32
+2020/06/02 02:21:36 thread 1: count=24900, time=3.0, throughput=32
+2020/06/02 02:21:36 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:21:36 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:21:39 thread 0: count=25200, time=3.0, throughput=32
+2020/06/02 02:21:39 thread 1: count=24500, time=3.0, throughput=31
+2020/06/02 02:21:39 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:21:39 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:21:42 thread 1: count=24500, time=3.0, throughput=31
+2020/06/02 02:21:42 thread 0: count=24900, time=3.0, throughput=32
+2020/06/02 02:21:42 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:21:42 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:21:45 thread 0: count=25400, time=3.0, throughput=32
+2020/06/02 02:21:45 thread 1: count=24900, time=3.0, throughput=32
+2020/06/02 02:21:45 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:21:45 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:21:48 thread 1: count=25900, time=3.0, throughput=33
+2020/06/02 02:21:48 thread 0: count=25900, time=3.0, throughput=33
+2020/06/02 02:21:48 thread 1: main loop, blockSize=4, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:21:48 thread 0: main loop, blockSize=4, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:21:51 thread 0: count=25300, time=3.0, throughput=32
+2020/06/02 02:21:51 thread 1: count=25600, time=3.0, throughput=33
+2020/06/02 02:21:51 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:21:51 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:21:54 thread 0: count=26400, time=3.0, throughput=34
+2020/06/02 02:21:54 thread 1: count=26900, time=3.0, throughput=34
+2020/06/02 02:21:54 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:21:54 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:21:57 thread 1: count=26400, time=3.0, throughput=34
+2020/06/02 02:21:57 thread 0: count=25700, time=3.0, throughput=33
+2020/06/02 02:21:57 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:21:57 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:22:00 thread 0: count=26800, time=3.0, throughput=34
+2020/06/02 02:22:00 thread 1: count=26600, time=3.0, throughput=34
+2020/06/02 02:22:00 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:22:00 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:22:03 thread 1: count=26400, time=3.0, throughput=34
+2020/06/02 02:22:03 thread 0: count=26600, time=3.0, throughput=34
+2020/06/02 02:22:03 thread 1: main loop, blockSize=4, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:22:03 thread 0: main loop, blockSize=4, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:22:06 thread 0: count=26300, time=3.0, throughput=34
+2020/06/02 02:22:06 thread 1: count=26000, time=3.0, throughput=33
+2020/06/02 02:22:06 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:22:06 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:22:09 thread 1: count=31700, time=3.0, throughput=41
+2020/06/02 02:22:09 thread 0: count=31300, time=3.0, throughput=40
+2020/06/02 02:22:09 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:22:09 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:22:12 thread 1: count=30800, time=3.0, throughput=40
+2020/06/02 02:22:12 thread 0: count=32100, time=3.0, throughput=41
+2020/06/02 02:22:12 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:22:12 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:22:15 thread 0: count=32100, time=3.0, throughput=41
+2020/06/02 02:22:15 thread 1: count=31800, time=3.0, throughput=41
+2020/06/02 02:22:15 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:22:15 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:22:18 thread 1: count=32300, time=3.0, throughput=42
+2020/06/02 02:22:18 thread 0: count=32600, time=3.0, throughput=42
+2020/06/02 02:22:18 thread 1: main loop, blockSize=4, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:22:18 thread 0: main loop, blockSize=4, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:22:21 thread 0: count=32500, time=3.0, throughput=42
+2020/06/02 02:22:21 thread 1: count=32900, time=3.0, throughput=42
+2020/06/02 02:22:21 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:22:21 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:22:24 thread 1: count=73900, time=3.0, throughput=96
+2020/06/02 02:22:24 thread 0: count=74100, time=3.0, throughput=96
+2020/06/02 02:22:24 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:22:24 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:22:27 thread 1: count=72800, time=3.0, throughput=94
+2020/06/02 02:22:27 thread 0: count=72900, time=3.0, throughput=94
+2020/06/02 02:22:27 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:22:27 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:22:30 thread 0: count=73000, time=3.0, throughput=95
+2020/06/02 02:22:30 thread 1: count=73100, time=3.0, throughput=95
+2020/06/02 02:22:30 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:22:30 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:22:33 thread 1: count=72600, time=3.0, throughput=94
+2020/06/02 02:22:33 thread 0: count=73000, time=3.0, throughput=95
+2020/06/02 02:22:33 thread 1: main loop, blockSize=4, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:22:33 thread 0: main loop, blockSize=4, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:22:36 thread 1: count=73200, time=3.0, throughput=95
+2020/06/02 02:22:36 thread 0: count=73000, time=3.0, throughput=94
+2020/06/02 02:22:36 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:22:36 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:22:39 thread 0: count=52300, time=3.0, throughput=136
+2020/06/02 02:22:39 thread 1: count=46100, time=3.0, throughput=119
+2020/06/02 02:22:39 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:22:39 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:22:42 thread 1: count=49800, time=3.0, throughput=129
+2020/06/02 02:22:42 thread 0: count=48400, time=3.0, throughput=125
+2020/06/02 02:22:42 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:22:42 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:22:45 thread 1: count=49800, time=3.0, throughput=129
+2020/06/02 02:22:45 thread 0: count=49600, time=3.0, throughput=128
+2020/06/02 02:22:45 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:22:45 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:22:48 thread 1: count=48600, time=3.0, throughput=126
+2020/06/02 02:22:48 thread 0: count=50300, time=3.0, throughput=130
+2020/06/02 02:22:48 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:22:48 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:22:51 thread 1: count=51800, time=3.0, throughput=134
+2020/06/02 02:22:51 thread 0: count=48500, time=3.0, throughput=126
+2020/06/02 02:22:51 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:22:51 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:22:54 thread 1: count=26300, time=3.0, throughput=68
+2020/06/02 02:22:54 thread 0: count=25300, time=3.0, throughput=65
+2020/06/02 02:22:54 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:22:54 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:22:57 thread 0: count=26400, time=3.0, throughput=68
+2020/06/02 02:22:57 thread 1: count=27500, time=3.0, throughput=71
+2020/06/02 02:22:57 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:22:57 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:23:00 thread 1: count=25200, time=3.0, throughput=65
+2020/06/02 02:23:00 thread 0: count=25600, time=3.0, throughput=66
+2020/06/02 02:23:00 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:23:00 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:23:03 thread 0: count=25200, time=3.0, throughput=65
+2020/06/02 02:23:03 thread 1: count=27400, time=3.0, throughput=71
+2020/06/02 02:23:03 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:23:03 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:23:06 thread 0: count=27500, time=3.0, throughput=71
+2020/06/02 02:23:06 thread 1: count=25100, time=3.0, throughput=65
+2020/06/02 02:23:06 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:23:06 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:23:09 thread 1: count=20100, time=3.0, throughput=52
+2020/06/02 02:23:09 thread 0: count=20800, time=3.0, throughput=53
+2020/06/02 02:23:09 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:23:09 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:23:12 thread 0: count=19800, time=3.0, throughput=51
+2020/06/02 02:23:12 thread 1: count=19200, time=3.2, throughput=47
+2020/06/02 02:23:12 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:23:12 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:23:15 thread 0: count=19000, time=3.0, throughput=49
+2020/06/02 02:23:15 thread 1: count=20100, time=3.0, throughput=52
+2020/06/02 02:23:15 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:23:15 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:23:18 thread 0: count=20400, time=3.0, throughput=53
+2020/06/02 02:23:18 thread 1: count=20200, time=3.0, throughput=52
+2020/06/02 02:23:18 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:23:18 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:23:21 thread 1: count=20000, time=3.0, throughput=51
+2020/06/02 02:23:21 thread 0: count=18900, time=3.0, throughput=48
+2020/06/02 02:23:21 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:23:21 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:23:24 thread 0: count=20500, time=3.0, throughput=53
+2020/06/02 02:23:24 thread 1: count=20600, time=3.0, throughput=52
+2020/06/02 02:23:24 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:23:24 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:23:27 thread 0: count=20000, time=3.0, throughput=51
+2020/06/02 02:23:27 thread 1: count=19800, time=3.0, throughput=51
+2020/06/02 02:23:27 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:23:27 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:23:30 thread 0: count=19500, time=3.0, throughput=50
+2020/06/02 02:23:30 thread 1: count=20000, time=3.0, throughput=51
+2020/06/02 02:23:30 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:23:30 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:23:33 thread 1: count=19600, time=3.0, throughput=50
+2020/06/02 02:23:33 thread 0: count=20200, time=3.0, throughput=52
+2020/06/02 02:23:33 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:23:33 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:23:36 thread 1: count=20100, time=3.0, throughput=52
+2020/06/02 02:23:36 thread 0: count=20100, time=3.0, throughput=52
+2020/06/02 02:23:36 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:23:36 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:23:39 thread 0: count=20700, time=3.0, throughput=53
+2020/06/02 02:23:39 thread 1: count=20300, time=3.0, throughput=52
+2020/06/02 02:23:39 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:23:39 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:23:42 thread 1: count=20800, time=3.0, throughput=54
+2020/06/02 02:23:42 thread 0: count=21000, time=3.0, throughput=54
+2020/06/02 02:23:42 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:23:42 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:23:45 thread 1: count=20700, time=3.0, throughput=53
+2020/06/02 02:23:45 thread 0: count=20800, time=3.0, throughput=54
+2020/06/02 02:23:45 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:23:45 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:23:48 thread 1: count=20800, time=3.0, throughput=54
+2020/06/02 02:23:48 thread 0: count=20600, time=3.0, throughput=53
+2020/06/02 02:23:48 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:23:48 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:23:51 thread 0: count=20700, time=3.0, throughput=53
+2020/06/02 02:23:51 thread 1: count=20400, time=3.0, throughput=53
+2020/06/02 02:23:51 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:23:51 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:23:54 thread 1: count=26600, time=3.0, throughput=69
+2020/06/02 02:23:54 thread 0: count=26700, time=3.0, throughput=69
+2020/06/02 02:23:54 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:23:54 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:23:57 thread 1: count=25800, time=3.0, throughput=66
+2020/06/02 02:23:57 thread 0: count=25100, time=3.0, throughput=64
+2020/06/02 02:23:57 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:23:57 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:24:00 thread 0: count=26200, time=3.0, throughput=68
+2020/06/02 02:24:00 thread 1: count=26600, time=3.0, throughput=69
+2020/06/02 02:24:00 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:24:00 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:24:03 thread 0: count=25700, time=3.0, throughput=66
+2020/06/02 02:24:03 thread 1: count=26300, time=3.0, throughput=68
+2020/06/02 02:24:03 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:24:03 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:24:06 thread 1: count=25500, time=3.0, throughput=66
+2020/06/02 02:24:06 thread 0: count=25400, time=3.0, throughput=65
+2020/06/02 02:24:06 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:24:06 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:24:09 thread 0: count=124100, time=3.0, throughput=323
+2020/06/02 02:24:09 thread 1: count=124600, time=3.0, throughput=324
+2020/06/02 02:24:09 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:24:09 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:24:12 thread 1: count=122500, time=3.0, throughput=318
+2020/06/02 02:24:12 thread 0: count=122400, time=3.0, throughput=318
+2020/06/02 02:24:12 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:24:12 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:24:15 thread 1: count=123800, time=3.0, throughput=322
+2020/06/02 02:24:15 thread 0: count=123600, time=3.0, throughput=321
+2020/06/02 02:24:15 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:24:15 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:24:18 thread 1: count=122400, time=3.0, throughput=318
+2020/06/02 02:24:18 thread 0: count=122900, time=3.0, throughput=319
+2020/06/02 02:24:18 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:24:18 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:24:21 thread 1: count=123000, time=3.0, throughput=320
+2020/06/02 02:24:21 thread 0: count=123500, time=3.0, throughput=321
+2020/06/02 02:24:21 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:24:21 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:24:24 thread 0: count=30400, time=3.0, throughput=79
+2020/06/02 02:24:24 thread 1: count=30400, time=3.0, throughput=78
+2020/06/02 02:24:24 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:24:24 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:24:27 thread 1: count=30800, time=3.0, throughput=80
+2020/06/02 02:24:27 thread 0: count=30900, time=3.0, throughput=80
+2020/06/02 02:24:27 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:24:27 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:24:30 thread 1: count=30700, time=3.0, throughput=79
+2020/06/02 02:24:30 thread 0: count=30800, time=3.0, throughput=80
+2020/06/02 02:24:30 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:24:30 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:24:33 thread 0: count=30900, time=3.0, throughput=80
+2020/06/02 02:24:33 thread 1: count=30900, time=3.0, throughput=80
+2020/06/02 02:24:33 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:24:33 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:24:36 thread 1: count=30700, time=3.0, throughput=79
+2020/06/02 02:24:36 thread 0: count=30800, time=3.0, throughput=80
+2020/06/02 02:24:36 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:24:36 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:24:39 thread 1: count=19500, time=3.0, throughput=50
+2020/06/02 02:24:39 thread 0: count=19600, time=3.0, throughput=50
+2020/06/02 02:24:39 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:24:39 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:24:42 thread 1: count=20400, time=3.0, throughput=53
+2020/06/02 02:24:42 thread 0: count=20400, time=3.0, throughput=52
+2020/06/02 02:24:42 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:24:42 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:24:45 thread 1: count=20100, time=3.0, throughput=52
+2020/06/02 02:24:45 thread 0: count=20500, time=3.0, throughput=53
+2020/06/02 02:24:45 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:24:45 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:24:48 thread 1: count=19200, time=3.0, throughput=49
+2020/06/02 02:24:48 thread 0: count=19400, time=3.0, throughput=50
+2020/06/02 02:24:48 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:24:48 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:24:52 thread 0: count=20700, time=3.0, throughput=53
+2020/06/02 02:24:52 thread 1: count=20400, time=3.0, throughput=53
+2020/06/02 02:24:52 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:24:52 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:24:55 thread 1: count=18100, time=3.0, throughput=47
+2020/06/02 02:24:55 thread 0: count=17700, time=3.0, throughput=45
+2020/06/02 02:24:55 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:24:55 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:24:58 thread 0: count=18300, time=3.0, throughput=47
+2020/06/02 02:24:58 thread 1: count=18400, time=3.0, throughput=47
+2020/06/02 02:24:58 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:24:58 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:25:01 thread 0: count=17800, time=3.0, throughput=46
+2020/06/02 02:25:01 thread 1: count=17900, time=3.0, throughput=46
+2020/06/02 02:25:01 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:25:01 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:25:04 thread 0: count=18500, time=3.0, throughput=48
+2020/06/02 02:25:04 thread 1: count=18600, time=3.0, throughput=48
+2020/06/02 02:25:04 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:25:04 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:25:07 thread 0: count=17200, time=3.0, throughput=44
+2020/06/02 02:25:07 thread 1: count=17300, time=3.0, throughput=44
+2020/06/02 02:25:07 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:25:07 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:25:10 thread 1: count=18200, time=3.0, throughput=47
+2020/06/02 02:25:10 thread 0: count=18100, time=3.0, throughput=46
+2020/06/02 02:25:10 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:25:10 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:25:13 thread 0: count=18600, time=3.0, throughput=48
+2020/06/02 02:25:13 thread 1: count=18600, time=3.0, throughput=48
+2020/06/02 02:25:13 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:25:13 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:25:16 thread 1: count=17900, time=3.0, throughput=46
+2020/06/02 02:25:16 thread 0: count=17600, time=3.0, throughput=45
+2020/06/02 02:25:16 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:25:16 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:25:19 thread 0: count=17900, time=3.0, throughput=46
+2020/06/02 02:25:19 thread 1: count=17900, time=3.0, throughput=46
+2020/06/02 02:25:19 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:25:19 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:25:22 thread 0: count=18600, time=3.0, throughput=48
+2020/06/02 02:25:22 thread 1: count=18900, time=3.1, throughput=48
+2020/06/02 02:25:22 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:25:22 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:25:25 thread 1: count=19300, time=3.0, throughput=50
+2020/06/02 02:25:25 thread 0: count=19500, time=3.0, throughput=50
+2020/06/02 02:25:25 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:25:25 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:25:28 thread 1: count=19100, time=3.0, throughput=49
+2020/06/02 02:25:28 thread 0: count=19000, time=3.0, throughput=49
+2020/06/02 02:25:28 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:25:28 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:25:31 thread 0: count=19400, time=3.0, throughput=50
+2020/06/02 02:25:31 thread 1: count=19300, time=3.0, throughput=50
+2020/06/02 02:25:31 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:25:31 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:25:34 thread 0: count=19500, time=3.0, throughput=50
+2020/06/02 02:25:34 thread 1: count=19800, time=3.0, throughput=51
+2020/06/02 02:25:34 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:25:34 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:25:37 thread 0: count=18600, time=3.0, throughput=48
+2020/06/02 02:25:37 thread 1: count=18800, time=3.0, throughput=48
+2020/06/02 02:25:37 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:25:37 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:25:40 thread 1: count=23100, time=3.0, throughput=60
+2020/06/02 02:25:40 thread 0: count=23000, time=3.0, throughput=59
+2020/06/02 02:25:40 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:25:40 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:25:43 thread 0: count=23600, time=3.0, throughput=61
+2020/06/02 02:25:43 thread 1: count=24100, time=3.0, throughput=62
+2020/06/02 02:25:43 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:25:43 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:25:46 thread 1: count=23300, time=3.0, throughput=60
+2020/06/02 02:25:46 thread 0: count=22700, time=3.0, throughput=58
+2020/06/02 02:25:46 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:25:46 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:25:49 thread 1: count=23500, time=3.0, throughput=61
+2020/06/02 02:25:49 thread 0: count=23900, time=3.0, throughput=62
+2020/06/02 02:25:49 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:25:49 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:25:52 thread 0: count=23400, time=3.0, throughput=60
+2020/06/02 02:25:52 thread 1: count=23600, time=3.0, throughput=61
+2020/06/02 02:25:52 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:25:52 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:25:55 thread 0: count=72900, time=3.0, throughput=189
+2020/06/02 02:25:55 thread 1: count=73300, time=3.0, throughput=190
+2020/06/02 02:25:55 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:25:55 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:25:58 thread 0: count=71700, time=3.0, throughput=186
+2020/06/02 02:25:58 thread 1: count=71600, time=3.0, throughput=186
+2020/06/02 02:25:58 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:25:58 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:26:01 thread 1: count=72700, time=3.0, throughput=189
+2020/06/02 02:26:01 thread 0: count=72700, time=3.0, throughput=189
+2020/06/02 02:26:01 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:26:01 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:26:04 thread 1: count=72600, time=3.0, throughput=189
+2020/06/02 02:26:04 thread 0: count=72600, time=3.0, throughput=188
+2020/06/02 02:26:04 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:26:04 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:26:07 thread 0: count=71500, time=3.0, throughput=186
+2020/06/02 02:26:07 thread 1: count=71800, time=3.0, throughput=186
+2020/06/02 02:26:07 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:26:07 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:26:10 thread 1: count=32300, time=3.0, throughput=84
+2020/06/02 02:26:10 thread 0: count=32400, time=3.0, throughput=84
+2020/06/02 02:26:10 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:26:10 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:26:13 thread 1: count=32300, time=3.0, throughput=84
+2020/06/02 02:26:13 thread 0: count=32400, time=3.0, throughput=84
+2020/06/02 02:26:13 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:26:13 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:26:16 thread 1: count=32400, time=3.0, throughput=84
+2020/06/02 02:26:16 thread 0: count=32500, time=3.0, throughput=84
+2020/06/02 02:26:16 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:26:16 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:26:19 thread 0: count=32500, time=3.0, throughput=84
+2020/06/02 02:26:19 thread 1: count=32500, time=3.0, throughput=84
+2020/06/02 02:26:19 thread 1: main loop, blockSize=8, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:26:19 thread 0: main loop, blockSize=8, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:26:22 thread 0: count=32500, time=3.0, throughput=84
+2020/06/02 02:26:22 thread 1: count=32500, time=3.0, throughput=84
+2020/06/02 02:26:22 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:26:22 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:26:25 thread 0: count=18900, time=3.0, throughput=49
+2020/06/02 02:26:25 thread 1: count=19000, time=3.0, throughput=49
+2020/06/02 02:26:25 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:26:25 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:26:28 thread 1: count=21300, time=3.0, throughput=55
+2020/06/02 02:26:28 thread 0: count=21100, time=3.0, throughput=54
+2020/06/02 02:26:28 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:26:28 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:26:31 thread 0: count=20600, time=3.0, throughput=53
+2020/06/02 02:26:31 thread 1: count=20700, time=3.0, throughput=53
+2020/06/02 02:26:31 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:26:31 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:26:34 thread 0: count=20400, time=3.0, throughput=53
+2020/06/02 02:26:34 thread 1: count=20700, time=3.0, throughput=53
+2020/06/02 02:26:34 thread 1: main loop, blockSize=8, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:26:34 thread 0: main loop, blockSize=8, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:26:37 thread 1: count=21000, time=3.0, throughput=54
+2020/06/02 02:26:37 thread 0: count=21100, time=3.0, throughput=54
+2020/06/02 02:26:37 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:26:37 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:26:40 thread 0: count=17100, time=3.0, throughput=44
+2020/06/02 02:26:40 thread 1: count=17600, time=3.0, throughput=45
+2020/06/02 02:26:40 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:26:40 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:26:43 thread 0: count=18600, time=3.0, throughput=48
+2020/06/02 02:26:43 thread 1: count=18700, time=3.0, throughput=48
+2020/06/02 02:26:43 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:26:43 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:26:46 thread 0: count=18400, time=3.0, throughput=47
+2020/06/02 02:26:46 thread 1: count=18000, time=3.0, throughput=46
+2020/06/02 02:26:46 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:26:46 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:26:49 thread 0: count=18000, time=3.0, throughput=46
+2020/06/02 02:26:49 thread 1: count=17900, time=3.0, throughput=46
+2020/06/02 02:26:49 thread 0: main loop, blockSize=8, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:26:49 thread 1: main loop, blockSize=8, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:26:52 thread 0: count=18400, time=3.0, throughput=47
+2020/06/02 02:26:52 thread 1: count=18600, time=3.0, throughput=48
+2020/06/02 02:26:52 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:26:52 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:26:55 thread 0: count=17600, time=3.0, throughput=45
+2020/06/02 02:26:55 thread 1: count=17500, time=3.0, throughput=45
+2020/06/02 02:26:55 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:26:55 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:26:58 thread 1: count=18300, time=3.0, throughput=47
+2020/06/02 02:26:58 thread 0: count=18100, time=3.0, throughput=47
+2020/06/02 02:26:58 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:26:58 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:27:01 thread 0: count=17800, time=3.0, throughput=46
+2020/06/02 02:27:01 thread 1: count=18600, time=3.0, throughput=48
+2020/06/02 02:27:01 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:27:01 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:27:04 thread 0: count=18400, time=3.0, throughput=47
+2020/06/02 02:27:04 thread 1: count=18100, time=3.0, throughput=46
+2020/06/02 02:27:04 thread 1: main loop, blockSize=8, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:27:04 thread 0: main loop, blockSize=8, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:27:07 thread 0: count=18500, time=3.0, throughput=48
+2020/06/02 02:27:07 thread 1: count=18400, time=3.0, throughput=47
+2020/06/02 02:27:07 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:27:07 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:27:10 thread 0: count=18000, time=3.0, throughput=46
+2020/06/02 02:27:10 thread 1: count=17700, time=3.0, throughput=45
+2020/06/02 02:27:10 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:27:10 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:27:13 thread 1: count=18300, time=3.0, throughput=47
+2020/06/02 02:27:13 thread 0: count=18000, time=3.0, throughput=46
+2020/06/02 02:27:13 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:27:13 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:27:16 thread 1: count=18300, time=3.0, throughput=47
+2020/06/02 02:27:16 thread 0: count=19000, time=3.0, throughput=49
+2020/06/02 02:27:16 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:27:16 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:27:19 thread 1: count=18500, time=3.0, throughput=48
+2020/06/02 02:27:19 thread 0: count=19100, time=3.0, throughput=49
+2020/06/02 02:27:19 thread 1: main loop, blockSize=8, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:27:19 thread 0: main loop, blockSize=8, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:27:22 thread 1: count=19100, time=3.0, throughput=49
+2020/06/02 02:27:22 thread 0: count=18400, time=3.0, throughput=47
+2020/06/02 02:27:22 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:27:22 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:27:25 thread 1: count=22500, time=3.0, throughput=58
+2020/06/02 02:27:25 thread 0: count=22500, time=3.0, throughput=58
+2020/06/02 02:27:25 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:27:25 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:27:28 thread 0: count=22600, time=3.0, throughput=58
+2020/06/02 02:27:28 thread 1: count=22000, time=3.0, throughput=57
+2020/06/02 02:27:28 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:27:28 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:27:31 thread 0: count=22900, time=3.0, throughput=59
+2020/06/02 02:27:31 thread 1: count=22900, time=3.0, throughput=59
+2020/06/02 02:27:31 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:27:31 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:27:34 thread 0: count=22300, time=3.0, throughput=58
+2020/06/02 02:27:34 thread 1: count=22300, time=3.0, throughput=57
+2020/06/02 02:27:34 thread 1: main loop, blockSize=8, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:27:34 thread 0: main loop, blockSize=8, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:27:37 thread 1: count=22900, time=3.0, throughput=59
+2020/06/02 02:27:37 thread 0: count=23000, time=3.0, throughput=59
+2020/06/02 02:27:37 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:27:37 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:27:40 thread 0: count=56900, time=3.0, throughput=148
+2020/06/02 02:27:40 thread 1: count=56800, time=3.0, throughput=147
+2020/06/02 02:27:40 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:27:40 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:27:43 thread 0: count=56400, time=3.0, throughput=146
+2020/06/02 02:27:43 thread 1: count=56400, time=3.0, throughput=146
+2020/06/02 02:27:43 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:27:43 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:27:46 thread 1: count=55700, time=3.0, throughput=144
+2020/06/02 02:27:46 thread 0: count=55600, time=3.0, throughput=144
+2020/06/02 02:27:46 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:27:46 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:27:49 thread 1: count=56900, time=3.0, throughput=148
+2020/06/02 02:27:49 thread 0: count=57000, time=3.0, throughput=148
+2020/06/02 02:27:49 thread 1: main loop, blockSize=8, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:27:49 thread 0: main loop, blockSize=8, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:27:52 thread 1: count=57400, time=3.0, throughput=149
+2020/06/02 02:27:52 thread 0: count=57400, time=3.0, throughput=149
+2020/06/02 02:27:52 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:27:52 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:27:55 thread 0: count=9200, time=3.0, throughput=380
+2020/06/02 02:27:55 thread 1: count=9800, time=3.0, throughput=405
+2020/06/02 02:27:55 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:27:55 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:27:58 thread 1: count=9100, time=3.0, throughput=377
+2020/06/02 02:27:58 thread 0: count=9400, time=3.0, throughput=389
+2020/06/02 02:27:58 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:27:58 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:28:01 thread 0: count=9400, time=3.0, throughput=391
+2020/06/02 02:28:01 thread 1: count=9200, time=3.0, throughput=382
+2020/06/02 02:28:01 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:28:01 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:28:04 thread 0: count=8900, time=3.0, throughput=370
+2020/06/02 02:28:04 thread 1: count=10000, time=3.0, throughput=415
+2020/06/02 02:28:04 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:28:04 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:28:07 thread 0: count=9200, time=3.0, throughput=379
+2020/06/02 02:28:07 thread 1: count=9100, time=3.0, throughput=375
+2020/06/02 02:28:07 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:28:07 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:28:10 thread 1: count=4600, time=3.0, throughput=189
+2020/06/02 02:28:10 thread 0: count=4900, time=3.0, throughput=202
+2020/06/02 02:28:10 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:28:10 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:28:13 thread 0: count=4500, time=3.0, throughput=186
+2020/06/02 02:28:13 thread 1: count=4700, time=3.0, throughput=193
+2020/06/02 02:28:13 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:28:13 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:28:16 thread 1: count=4700, time=3.0, throughput=195
+2020/06/02 02:28:16 thread 0: count=4800, time=3.0, throughput=197
+2020/06/02 02:28:16 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:28:16 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:28:19 thread 0: count=4900, time=3.0, throughput=201
+2020/06/02 02:28:19 thread 1: count=4800, time=3.0, throughput=197
+2020/06/02 02:28:19 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:28:19 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:28:22 thread 1: count=4900, time=3.0, throughput=202
+2020/06/02 02:28:22 thread 0: count=4800, time=3.0, throughput=198
+2020/06/02 02:28:22 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:28:22 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:28:25 thread 1: count=4000, time=3.0, throughput=166
+2020/06/02 02:28:25 thread 0: count=4100, time=3.0, throughput=169
+2020/06/02 02:28:25 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:28:25 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:28:28 thread 0: count=4100, time=3.0, throughput=170
+2020/06/02 02:28:28 thread 1: count=4200, time=3.0, throughput=173
+2020/06/02 02:28:28 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:28:28 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:28:31 thread 1: count=4000, time=3.0, throughput=166
+2020/06/02 02:28:31 thread 0: count=4000, time=3.0, throughput=165
+2020/06/02 02:28:31 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:28:31 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:28:34 thread 1: count=4100, time=3.0, throughput=170
+2020/06/02 02:28:34 thread 0: count=4300, time=3.0, throughput=176
+2020/06/02 02:28:34 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:28:34 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:28:37 thread 0: count=4100, time=3.0, throughput=170
+2020/06/02 02:28:37 thread 1: count=4200, time=3.0, throughput=172
+2020/06/02 02:28:37 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:28:37 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:28:40 thread 0: count=4200, time=3.0, throughput=174
+2020/06/02 02:28:40 thread 1: count=4100, time=3.0, throughput=170
+2020/06/02 02:28:40 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:28:40 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:28:44 thread 0: count=4200, time=3.0, throughput=173
+2020/06/02 02:28:44 thread 1: count=4200, time=3.0, throughput=172
+2020/06/02 02:28:44 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:28:44 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:28:47 thread 0: count=4000, time=3.0, throughput=165
+2020/06/02 02:28:47 thread 1: count=4100, time=3.0, throughput=169
+2020/06/02 02:28:47 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:28:47 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:28:50 thread 1: count=4000, time=3.0, throughput=166
+2020/06/02 02:28:50 thread 0: count=4000, time=3.0, throughput=166
+2020/06/02 02:28:50 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:28:50 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:28:53 thread 1: count=4300, time=3.0, throughput=177
+2020/06/02 02:28:53 thread 0: count=4400, time=3.0, throughput=180
+2020/06/02 02:28:53 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:28:53 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:28:56 thread 0: count=4400, time=3.0, throughput=182
+2020/06/02 02:28:56 thread 1: count=4500, time=3.0, throughput=185
+2020/06/02 02:28:56 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:28:56 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:28:59 thread 0: count=4500, time=3.0, throughput=185
+2020/06/02 02:28:59 thread 1: count=4400, time=3.0, throughput=181
+2020/06/02 02:28:59 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:28:59 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:29:02 thread 1: count=4500, time=3.0, throughput=185
+2020/06/02 02:29:02 thread 0: count=4600, time=3.0, throughput=189
+2020/06/02 02:29:02 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:29:02 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:29:05 thread 0: count=4700, time=3.1, throughput=192
+2020/06/02 02:29:05 thread 1: count=4600, time=3.1, throughput=187
+2020/06/02 02:29:05 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:29:05 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:29:08 thread 0: count=4500, time=3.0, throughput=185
+2020/06/02 02:29:08 thread 1: count=4500, time=3.0, throughput=184
+2020/06/02 02:29:08 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:29:08 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:29:11 thread 1: count=5800, time=3.0, throughput=238
+2020/06/02 02:29:11 thread 0: count=5800, time=3.0, throughput=238
+2020/06/02 02:29:11 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:29:11 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:29:14 thread 0: count=5700, time=3.0, throughput=236
+2020/06/02 02:29:14 thread 1: count=5600, time=3.0, throughput=230
+2020/06/02 02:29:14 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:29:14 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:29:17 thread 0: count=5700, time=3.1, throughput=233
+2020/06/02 02:29:17 thread 1: count=5800, time=3.1, throughput=237
+2020/06/02 02:29:17 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:29:17 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:29:20 thread 0: count=5600, time=3.0, throughput=230
+2020/06/02 02:29:20 thread 1: count=5800, time=3.1, throughput=236
+2020/06/02 02:29:20 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:29:20 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:29:23 thread 1: count=5500, time=3.0, throughput=228
+2020/06/02 02:29:23 thread 0: count=5800, time=3.0, throughput=239
+2020/06/02 02:29:23 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:29:23 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:29:26 thread 1: count=7900, time=3.0, throughput=326
+2020/06/02 02:29:26 thread 0: count=7900, time=3.0, throughput=326
+2020/06/02 02:29:26 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:29:26 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:29:29 thread 1: count=7600, time=3.0, throughput=315
+2020/06/02 02:29:29 thread 0: count=7600, time=3.0, throughput=315
+2020/06/02 02:29:29 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:29:29 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:29:32 thread 1: count=7600, time=3.0, throughput=316
+2020/06/02 02:29:32 thread 0: count=7700, time=3.0, throughput=318
+2020/06/02 02:29:32 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:29:32 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:29:35 thread 1: count=7500, time=3.0, throughput=311
+2020/06/02 02:29:35 thread 0: count=7500, time=3.0, throughput=311
+2020/06/02 02:29:35 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:29:35 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:29:38 thread 1: count=7900, time=3.0, throughput=325
+2020/06/02 02:29:38 thread 0: count=7900, time=3.0, throughput=325
+2020/06/02 02:29:38 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:29:38 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:29:41 thread 1: count=7600, time=3.0, throughput=316
+2020/06/02 02:29:41 thread 0: count=7600, time=3.0, throughput=316
+2020/06/02 02:29:41 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:29:41 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:29:44 thread 1: count=7700, time=3.0, throughput=317
+2020/06/02 02:29:44 thread 0: count=7700, time=3.0, throughput=317
+2020/06/02 02:29:44 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:29:44 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:29:47 thread 0: count=7700, time=3.0, throughput=318
+2020/06/02 02:29:47 thread 1: count=7700, time=3.0, throughput=317
+2020/06/02 02:29:47 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:29:47 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:29:50 thread 1: count=7700, time=3.0, throughput=317
+2020/06/02 02:29:50 thread 0: count=7700, time=3.0, throughput=317
+2020/06/02 02:29:50 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:29:50 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:29:53 thread 0: count=7600, time=3.0, throughput=316
+2020/06/02 02:29:53 thread 1: count=7600, time=3.0, throughput=316
+2020/06/02 02:29:53 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:29:53 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:29:56 thread 1: count=5000, time=3.0, throughput=207
+2020/06/02 02:29:56 thread 0: count=5000, time=3.0, throughput=206
+2020/06/02 02:29:56 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:29:56 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:29:59 thread 0: count=4600, time=3.0, throughput=189
+2020/06/02 02:29:59 thread 1: count=4600, time=3.0, throughput=189
+2020/06/02 02:29:59 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:29:59 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:30:02 thread 1: count=4700, time=3.0, throughput=195
+2020/06/02 02:30:02 thread 0: count=4700, time=3.0, throughput=194
+2020/06/02 02:30:02 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:30:02 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:30:05 thread 0: count=4500, time=3.0, throughput=186
+2020/06/02 02:30:05 thread 1: count=4500, time=3.0, throughput=185
+2020/06/02 02:30:05 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:30:05 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:30:08 thread 1: count=4600, time=3.0, throughput=189
+2020/06/02 02:30:08 thread 0: count=4600, time=3.0, throughput=189
+2020/06/02 02:30:08 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:30:08 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:30:11 thread 1: count=4100, time=3.1, throughput=167
+2020/06/02 02:30:11 thread 0: count=4100, time=3.1, throughput=167
+2020/06/02 02:30:11 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:30:11 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:30:14 thread 1: count=3800, time=3.0, throughput=157
+2020/06/02 02:30:15 thread 0: count=3800, time=3.1, throughput=153
+2020/06/02 02:30:15 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:30:15 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:30:18 thread 0: count=4200, time=3.0, throughput=172
+2020/06/02 02:30:18 thread 1: count=4200, time=3.1, throughput=171
+2020/06/02 02:30:18 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:30:18 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:30:21 thread 1: count=4300, time=3.0, throughput=177
+2020/06/02 02:30:21 thread 0: count=4300, time=3.0, throughput=176
+2020/06/02 02:30:21 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:30:21 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:30:24 thread 0: count=4000, time=3.0, throughput=165
+2020/06/02 02:30:24 thread 1: count=4100, time=3.0, throughput=169
+2020/06/02 02:30:24 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:30:24 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:30:27 thread 1: count=4000, time=3.1, throughput=163
+2020/06/02 02:30:27 thread 0: count=4000, time=3.1, throughput=163
+2020/06/02 02:30:27 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:30:27 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:30:30 thread 1: count=4000, time=3.0, throughput=165
+2020/06/02 02:30:30 thread 0: count=4100, time=3.0, throughput=168
+2020/06/02 02:30:30 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:30:30 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:30:33 thread 1: count=4000, time=3.0, throughput=166
+2020/06/02 02:30:33 thread 0: count=4000, time=3.0, throughput=166
+2020/06/02 02:30:33 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:30:33 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:30:36 thread 0: count=4300, time=3.0, throughput=176
+2020/06/02 02:30:36 thread 1: count=4300, time=3.2, throughput=170
+2020/06/02 02:30:36 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:30:36 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:30:39 thread 0: count=4600, time=3.0, throughput=190
+2020/06/02 02:30:39 thread 1: count=4600, time=3.0, throughput=190
+2020/06/02 02:30:39 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:30:39 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:30:42 thread 1: count=4200, time=3.0, throughput=174
+2020/06/02 02:30:42 thread 0: count=4300, time=3.0, throughput=177
+2020/06/02 02:30:42 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:30:42 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:30:45 thread 1: count=4900, time=3.0, throughput=201
+2020/06/02 02:30:45 thread 0: count=4900, time=3.1, throughput=200
+2020/06/02 02:30:45 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:30:45 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:30:48 thread 1: count=4400, time=3.0, throughput=181
+2020/06/02 02:30:48 thread 0: count=4500, time=3.0, throughput=185
+2020/06/02 02:30:48 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:30:48 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:30:51 thread 1: count=4500, time=3.0, throughput=185
+2020/06/02 02:30:51 thread 0: count=4600, time=3.0, throughput=188
+2020/06/02 02:30:51 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:30:51 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:30:54 thread 0: count=4100, time=3.0, throughput=170
+2020/06/02 02:30:54 thread 1: count=4200, time=3.0, throughput=173
+2020/06/02 02:30:54 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:30:54 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:30:57 thread 0: count=5400, time=3.0, throughput=224
+2020/06/02 02:30:57 thread 1: count=5800, time=3.0, throughput=238
+2020/06/02 02:30:57 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:30:57 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:31:00 thread 1: count=5400, time=3.0, throughput=223
+2020/06/02 02:31:00 thread 0: count=5300, time=3.0, throughput=219
+2020/06/02 02:31:00 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:31:00 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:31:03 thread 1: count=5500, time=3.0, throughput=227
+2020/06/02 02:31:03 thread 0: count=5500, time=3.0, throughput=226
+2020/06/02 02:31:03 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:31:03 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:31:06 thread 0: count=5300, time=3.0, throughput=218
+2020/06/02 02:31:06 thread 1: count=5500, time=3.0, throughput=226
+2020/06/02 02:31:06 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:31:06 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:31:09 thread 0: count=5200, time=3.0, throughput=214
+2020/06/02 02:31:09 thread 1: count=5700, time=3.0, throughput=234
+2020/06/02 02:31:09 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:31:09 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:31:12 thread 1: count=7400, time=3.0, throughput=306
+2020/06/02 02:31:12 thread 0: count=7400, time=3.0, throughput=306
+2020/06/02 02:31:12 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:31:12 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:31:15 thread 1: count=7400, time=3.0, throughput=306
+2020/06/02 02:31:15 thread 0: count=7400, time=3.0, throughput=306
+2020/06/02 02:31:15 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:31:15 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:31:18 thread 0: count=7400, time=3.0, throughput=304
+2020/06/02 02:31:18 thread 1: count=7400, time=3.0, throughput=304
+2020/06/02 02:31:18 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:31:18 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:31:21 thread 1: count=7400, time=3.0, throughput=307
+2020/06/02 02:31:21 thread 0: count=7400, time=3.0, throughput=307
+2020/06/02 02:31:21 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:31:21 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:31:24 thread 0: count=7400, time=3.0, throughput=305
+2020/06/02 02:31:24 thread 1: count=7400, time=3.0, throughput=305
+2020/06/02 02:31:24 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:31:24 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:31:28 thread 0: count=7600, time=3.0, throughput=313
+2020/06/02 02:31:28 thread 1: count=7600, time=3.0, throughput=313
+2020/06/02 02:31:28 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:31:28 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:31:31 thread 1: count=7600, time=3.0, throughput=316
+2020/06/02 02:31:31 thread 0: count=7600, time=3.0, throughput=316
+2020/06/02 02:31:31 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:31:31 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:31:34 thread 0: count=7700, time=3.0, throughput=317
+2020/06/02 02:31:34 thread 1: count=7700, time=3.0, throughput=316
+2020/06/02 02:31:34 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:31:34 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:31:37 thread 0: count=7600, time=3.0, throughput=316
+2020/06/02 02:31:37 thread 1: count=7600, time=3.0, throughput=316
+2020/06/02 02:31:37 thread 0: main loop, blockSize=128, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:31:37 thread 1: main loop, blockSize=128, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:31:40 thread 0: count=7600, time=3.0, throughput=315
+2020/06/02 02:31:40 thread 1: count=7700, time=3.0, throughput=317
+2020/06/02 02:31:40 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:31:40 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:31:43 thread 0: count=4500, time=3.0, throughput=184
+2020/06/02 02:31:43 thread 1: count=4600, time=3.1, throughput=188
+2020/06/02 02:31:43 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:31:43 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:31:46 thread 1: count=4600, time=3.0, throughput=190
+2020/06/02 02:31:46 thread 0: count=4600, time=3.0, throughput=190
+2020/06/02 02:31:46 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:31:46 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:31:49 thread 0: count=4300, time=3.0, throughput=178
+2020/06/02 02:31:49 thread 1: count=4400, time=3.0, throughput=180
+2020/06/02 02:31:49 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:31:49 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:31:52 thread 1: count=4500, time=3.0, throughput=185
+2020/06/02 02:31:52 thread 0: count=4500, time=3.0, throughput=185
+2020/06/02 02:31:52 thread 1: main loop, blockSize=128, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:31:52 thread 0: main loop, blockSize=128, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:31:55 thread 0: count=3900, time=3.0, throughput=160
+2020/06/02 02:31:55 thread 1: count=3900, time=3.0, throughput=160
+2020/06/02 02:31:55 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:31:55 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:31:58 thread 0: count=4300, time=3.0, throughput=176
+2020/06/02 02:31:58 thread 1: count=4400, time=3.0, throughput=180
+2020/06/02 02:31:58 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:31:58 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:32:01 thread 1: count=3900, time=3.0, throughput=162
+2020/06/02 02:32:01 thread 0: count=4000, time=3.0, throughput=164
+2020/06/02 02:32:01 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:32:01 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:32:04 thread 0: count=4300, time=3.0, throughput=178
+2020/06/02 02:32:04 thread 1: count=4300, time=3.0, throughput=176
+2020/06/02 02:32:04 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:32:04 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:32:07 thread 1: count=3700, time=3.0, throughput=153
+2020/06/02 02:32:07 thread 0: count=3700, time=3.1, throughput=151
+2020/06/02 02:32:07 thread 1: main loop, blockSize=128, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:32:07 thread 0: main loop, blockSize=128, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:32:10 thread 0: count=3800, time=3.0, throughput=157
+2020/06/02 02:32:10 thread 1: count=3800, time=3.0, throughput=156
+2020/06/02 02:32:10 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:32:10 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:32:13 thread 0: count=3800, time=3.0, throughput=156
+2020/06/02 02:32:13 thread 1: count=3800, time=3.1, throughput=155
+2020/06/02 02:32:13 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:32:13 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:32:16 thread 0: count=4100, time=3.1, throughput=167
+2020/06/02 02:32:16 thread 1: count=4100, time=3.1, throughput=167
+2020/06/02 02:32:16 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:32:16 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:32:19 thread 0: count=3700, time=3.0, throughput=151
+2020/06/02 02:32:19 thread 1: count=3700, time=3.0, throughput=151
+2020/06/02 02:32:19 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:32:19 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:32:22 thread 1: count=3900, time=3.0, throughput=162
+2020/06/02 02:32:22 thread 0: count=3900, time=3.0, throughput=162
+2020/06/02 02:32:22 thread 1: main loop, blockSize=128, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:32:22 thread 0: main loop, blockSize=128, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:32:25 thread 1: count=4000, time=3.0, throughput=163
+2020/06/02 02:32:25 thread 0: count=4100, time=3.1, throughput=166
+2020/06/02 02:32:25 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:32:25 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:32:28 thread 1: count=4400, time=3.0, throughput=180
+2020/06/02 02:32:28 thread 0: count=4400, time=3.1, throughput=179
+2020/06/02 02:32:28 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:32:28 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:32:31 thread 1: count=4300, time=3.0, throughput=176
+2020/06/02 02:32:31 thread 0: count=4300, time=3.1, throughput=176
+2020/06/02 02:32:31 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:32:31 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:32:34 thread 0: count=3800, time=3.0, throughput=158
+2020/06/02 02:32:34 thread 1: count=3900, time=3.0, throughput=162
+2020/06/02 02:32:34 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:32:34 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:32:37 thread 0: count=4100, time=3.0, throughput=170
+2020/06/02 02:32:37 thread 1: count=4100, time=3.0, throughput=169
+2020/06/02 02:32:37 thread 1: main loop, blockSize=128, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:32:37 thread 0: main loop, blockSize=128, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:32:40 thread 0: count=4000, time=3.0, throughput=165
+2020/06/02 02:32:40 thread 1: count=4100, time=3.1, throughput=167
+2020/06/02 02:32:40 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:32:40 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:32:44 thread 0: count=5400, time=3.0, throughput=223
+2020/06/02 02:32:44 thread 1: count=5500, time=3.0, throughput=227
+2020/06/02 02:32:44 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:32:44 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:32:47 thread 0: count=5500, time=3.0, throughput=228
+2020/06/02 02:32:47 thread 1: count=5600, time=3.0, throughput=230
+2020/06/02 02:32:47 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:32:47 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:32:50 thread 1: count=5500, time=3.0, throughput=227
+2020/06/02 02:32:50 thread 0: count=5300, time=3.0, throughput=218
+2020/06/02 02:32:50 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:32:50 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:32:53 thread 0: count=5400, time=3.0, throughput=224
+2020/06/02 02:32:53 thread 1: count=5600, time=3.0, throughput=232
+2020/06/02 02:32:53 thread 1: main loop, blockSize=128, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:32:53 thread 0: main loop, blockSize=128, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:32:56 thread 0: count=5300, time=3.0, throughput=219
+2020/06/02 02:32:56 thread 1: count=5400, time=3.0, throughput=221
+2020/06/02 02:32:56 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:32:56 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:32:59 thread 1: count=7200, time=3.0, throughput=297
+2020/06/02 02:32:59 thread 0: count=7200, time=3.0, throughput=297
+2020/06/02 02:32:59 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:32:59 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:33:02 thread 0: count=7100, time=3.0, throughput=294
+2020/06/02 02:33:02 thread 1: count=7100, time=3.0, throughput=294
+2020/06/02 02:33:02 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:33:02 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:33:05 thread 0: count=7100, time=3.0, throughput=293
+2020/06/02 02:33:05 thread 1: count=7100, time=3.0, throughput=293
+2020/06/02 02:33:05 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:33:05 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:33:08 thread 1: count=7200, time=3.0, throughput=299
+2020/06/02 02:33:08 thread 0: count=7200, time=3.0, throughput=299
+2020/06/02 02:33:08 thread 0: main loop, blockSize=128, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:33:08 thread 1: main loop, blockSize=128, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:33:11 thread 0: count=7200, time=3.0, throughput=296
+2020/06/02 02:33:11 thread 1: count=7200, time=3.0, throughput=296
+2020/06/02 02:33:11 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:33:11 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:33:14 thread 1: count=5000, time=3.0, throughput=411
+2020/06/02 02:33:14 thread 0: count=4800, time=3.1, throughput=393
+2020/06/02 02:33:14 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:33:14 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:33:17 thread 1: count=4700, time=3.0, throughput=386
+2020/06/02 02:33:17 thread 0: count=4900, time=3.1, throughput=399
+2020/06/02 02:33:17 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:33:17 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:33:20 thread 0: count=4700, time=3.0, throughput=389
+2020/06/02 02:33:20 thread 1: count=5000, time=3.0, throughput=410
+2020/06/02 02:33:20 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:33:20 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:33:23 thread 0: count=4600, time=3.0, throughput=379
+2020/06/02 02:33:23 thread 1: count=4900, time=3.1, throughput=401
+2020/06/02 02:33:23 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:33:23 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:33:26 thread 0: count=4600, time=3.0, throughput=379
+2020/06/02 02:33:26 thread 1: count=5000, time=3.1, throughput=403
+2020/06/02 02:33:26 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:33:26 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:33:29 thread 1: count=3400, time=3.1, throughput=275
+2020/06/02 02:33:29 thread 0: count=3300, time=3.1, throughput=267
+2020/06/02 02:33:29 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:33:29 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:33:32 thread 0: count=3400, time=3.0, throughput=282
+2020/06/02 02:33:32 thread 1: count=3400, time=3.0, throughput=279
+2020/06/02 02:33:32 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:33:32 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:33:35 thread 0: count=3300, time=3.0, throughput=271
+2020/06/02 02:33:35 thread 1: count=3300, time=3.1, throughput=268
+2020/06/02 02:33:35 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:33:35 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:33:38 thread 0: count=3400, time=3.0, throughput=281
+2020/06/02 02:33:38 thread 1: count=3500, time=3.0, throughput=287
+2020/06/02 02:33:38 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:33:38 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:33:41 thread 0: count=3300, time=3.0, throughput=273
+2020/06/02 02:33:41 thread 1: count=3500, time=3.0, throughput=289
+2020/06/02 02:33:41 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:33:41 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:33:44 thread 1: count=3000, time=3.0, throughput=248
+2020/06/02 02:33:44 thread 0: count=3100, time=3.1, throughput=250
+2020/06/02 02:33:44 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:33:44 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:33:47 thread 0: count=3100, time=3.0, throughput=257
+2020/06/02 02:33:47 thread 1: count=3100, time=3.0, throughput=255
+2020/06/02 02:33:47 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:33:47 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:33:50 thread 0: count=3000, time=3.0, throughput=248
+2020/06/02 02:33:50 thread 1: count=3100, time=3.0, throughput=256
+2020/06/02 02:33:50 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:33:50 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:33:53 thread 1: count=3000, time=3.0, throughput=249
+2020/06/02 02:33:54 thread 0: count=3100, time=3.1, throughput=253
+2020/06/02 02:33:54 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:33:54 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:33:57 thread 0: count=3100, time=3.0, throughput=256
+2020/06/02 02:33:57 thread 1: count=3100, time=3.0, throughput=255
+2020/06/02 02:33:57 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:33:57 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:34:00 thread 1: count=3000, time=3.0, throughput=246
+2020/06/02 02:34:00 thread 0: count=3100, time=3.1, throughput=253
+2020/06/02 02:34:00 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:34:00 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:34:03 thread 0: count=3100, time=3.0, throughput=256
+2020/06/02 02:34:03 thread 1: count=3100, time=3.1, throughput=253
+2020/06/02 02:34:03 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:34:03 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:34:06 thread 0: count=3000, time=3.0, throughput=248
+2020/06/02 02:34:06 thread 1: count=3100, time=3.0, throughput=255
+2020/06/02 02:34:06 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:34:06 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:34:09 thread 1: count=3000, time=3.0, throughput=246
+2020/06/02 02:34:09 thread 0: count=3100, time=3.1, throughput=253
+2020/06/02 02:34:09 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:34:09 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:34:12 thread 0: count=3100, time=3.1, throughput=254
+2020/06/02 02:34:12 thread 1: count=3200, time=3.1, throughput=257
+2020/06/02 02:34:12 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:34:12 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:34:15 thread 0: count=3100, time=3.0, throughput=256
+2020/06/02 02:34:15 thread 1: count=3100, time=3.0, throughput=255
+2020/06/02 02:34:15 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:34:15 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:34:18 thread 1: count=3000, time=3.0, throughput=246
+2020/06/02 02:34:18 thread 0: count=3100, time=3.2, throughput=245
+2020/06/02 02:34:18 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:34:18 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:34:21 thread 1: count=3200, time=3.1, throughput=259
+2020/06/02 02:34:21 thread 0: count=3200, time=3.1, throughput=259
+2020/06/02 02:34:21 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:34:21 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:34:24 thread 0: count=3000, time=3.0, throughput=249
+2020/06/02 02:34:24 thread 1: count=3000, time=3.0, throughput=249
+2020/06/02 02:34:24 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:34:24 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:34:27 thread 0: count=3300, time=3.0, throughput=272
+2020/06/02 02:34:27 thread 1: count=3200, time=3.0, throughput=263
+2020/06/02 02:34:27 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:34:27 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:34:30 thread 1: count=3600, time=3.0, throughput=298
+2020/06/02 02:34:30 thread 0: count=3500, time=3.1, throughput=285
+2020/06/02 02:34:30 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:34:30 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:34:33 thread 0: count=3400, time=3.0, throughput=282
+2020/06/02 02:34:33 thread 1: count=3300, time=3.1, throughput=269
+2020/06/02 02:34:33 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:34:33 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:34:36 thread 0: count=3500, time=3.0, throughput=288
+2020/06/02 02:34:36 thread 1: count=3500, time=3.1, throughput=285
+2020/06/02 02:34:36 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:34:36 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:34:39 thread 1: count=3500, time=3.1, throughput=284
+2020/06/02 02:34:40 thread 0: count=3600, time=3.1, throughput=289
+2020/06/02 02:34:40 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:34:40 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:34:43 thread 0: count=3600, time=3.0, throughput=298
+2020/06/02 02:34:43 thread 1: count=3600, time=3.0, throughput=296
+2020/06/02 02:34:43 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:34:43 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:34:46 thread 0: count=3900, time=3.0, throughput=323
+2020/06/02 02:34:46 thread 1: count=3900, time=3.0, throughput=323
+2020/06/02 02:34:46 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:34:46 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:34:49 thread 0: count=3800, time=3.0, throughput=313
+2020/06/02 02:34:49 thread 1: count=3800, time=3.0, throughput=313
+2020/06/02 02:34:49 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:34:49 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:34:52 thread 1: count=4000, time=3.0, throughput=329
+2020/06/02 02:34:52 thread 0: count=4000, time=3.0, throughput=329
+2020/06/02 02:34:52 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:34:52 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:34:55 thread 1: count=4000, time=3.0, throughput=328
+2020/06/02 02:34:55 thread 0: count=4000, time=3.0, throughput=328
+2020/06/02 02:34:55 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:34:55 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:34:58 thread 0: count=4000, time=3.1, throughput=325
+2020/06/02 02:34:58 thread 1: count=4000, time=3.1, throughput=325
+2020/06/02 02:34:58 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:34:58 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:35:01 thread 0: count=6300, time=3.0, throughput=517
+2020/06/02 02:35:01 thread 1: count=6300, time=3.0, throughput=517
+2020/06/02 02:35:01 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:35:01 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:35:04 thread 1: count=6300, time=3.0, throughput=522
+2020/06/02 02:35:04 thread 0: count=6300, time=3.0, throughput=522
+2020/06/02 02:35:04 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:35:04 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:35:07 thread 1: count=6300, time=3.0, throughput=523
+2020/06/02 02:35:07 thread 0: count=6300, time=3.0, throughput=523
+2020/06/02 02:35:07 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:35:07 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:35:10 thread 1: count=6300, time=3.0, throughput=522
+2020/06/02 02:35:10 thread 0: count=6300, time=3.0, throughput=522
+2020/06/02 02:35:10 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:35:10 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:35:13 thread 1: count=6300, time=3.0, throughput=524
+2020/06/02 02:35:13 thread 0: count=6300, time=3.0, throughput=524
+2020/06/02 02:35:13 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:35:13 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:35:16 thread 1: count=3600, time=3.0, throughput=299
+2020/06/02 02:35:16 thread 0: count=3600, time=3.0, throughput=296
+2020/06/02 02:35:16 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:35:16 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:35:19 thread 1: count=3600, time=3.0, throughput=295
+2020/06/02 02:35:19 thread 0: count=3600, time=3.1, throughput=293
+2020/06/02 02:35:19 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:35:19 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:35:22 thread 0: count=3600, time=3.0, throughput=296
+2020/06/02 02:35:22 thread 1: count=3600, time=3.1, throughput=294
+2020/06/02 02:35:22 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:35:22 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:35:25 thread 1: count=3600, time=3.0, throughput=295
+2020/06/02 02:35:25 thread 0: count=3600, time=3.1, throughput=294
+2020/06/02 02:35:25 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:35:25 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:35:28 thread 0: count=3100, time=3.0, throughput=256
+2020/06/02 02:35:28 thread 1: count=3100, time=3.0, throughput=256
+2020/06/02 02:35:28 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:35:28 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:35:31 thread 1: count=3100, time=3.0, throughput=256
+2020/06/02 02:35:31 thread 0: count=3100, time=3.1, throughput=254
+2020/06/02 02:35:31 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:35:31 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:35:34 thread 0: count=3100, time=3.0, throughput=256
+2020/06/02 02:35:34 thread 1: count=3000, time=3.0, throughput=248
+2020/06/02 02:35:34 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:35:34 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:35:37 thread 1: count=2900, time=3.1, throughput=235
+2020/06/02 02:35:37 thread 0: count=3000, time=3.1, throughput=243
+2020/06/02 02:35:37 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:35:37 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:35:40 thread 0: count=2900, time=3.0, throughput=238
+2020/06/02 02:35:40 thread 1: count=3000, time=3.1, throughput=243
+2020/06/02 02:35:40 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:35:40 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:35:43 thread 1: count=3100, time=3.1, throughput=249
+2020/06/02 02:35:43 thread 0: count=3100, time=3.1, throughput=246
+2020/06/02 02:35:43 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:35:43 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:35:46 thread 1: count=3300, time=3.0, throughput=273
+2020/06/02 02:35:47 thread 0: count=3300, time=3.0, throughput=271
+2020/06/02 02:35:47 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:35:47 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:35:50 thread 1: count=3100, time=3.1, throughput=251
+2020/06/02 02:35:50 thread 0: count=3100, time=3.1, throughput=250
+2020/06/02 02:35:50 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:35:50 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:35:53 thread 0: count=3000, time=3.0, throughput=249
+2020/06/02 02:35:53 thread 1: count=3000, time=3.0, throughput=248
+2020/06/02 02:35:53 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:35:53 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:35:56 thread 1: count=3000, time=3.0, throughput=248
+2020/06/02 02:35:56 thread 0: count=3000, time=3.0, throughput=246
+2020/06/02 02:35:56 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:35:56 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:35:59 thread 1: count=3000, time=3.0, throughput=247
+2020/06/02 02:35:59 thread 0: count=3100, time=3.0, throughput=254
+2020/06/02 02:35:59 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:35:59 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:36:02 thread 0: count=3100, time=3.1, throughput=252
+2020/06/02 02:36:02 thread 1: count=3300, time=3.1, throughput=267
+2020/06/02 02:36:02 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:36:02 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:36:05 thread 0: count=3100, time=3.0, throughput=256
+2020/06/02 02:36:05 thread 1: count=3100, time=3.0, throughput=254
+2020/06/02 02:36:05 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:36:05 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:36:08 thread 1: count=3100, time=3.0, throughput=254
+2020/06/02 02:36:08 thread 0: count=3100, time=3.1, throughput=252
+2020/06/02 02:36:08 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:36:08 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:36:11 thread 1: count=3000, time=3.0, throughput=249
+2020/06/02 02:36:11 thread 0: count=3100, time=3.0, throughput=256
+2020/06/02 02:36:11 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:36:11 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:36:14 thread 1: count=3200, time=3.0, throughput=262
+2020/06/02 02:36:14 thread 0: count=3300, time=3.1, throughput=269
+2020/06/02 02:36:14 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:36:14 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:36:17 thread 1: count=3400, time=3.0, throughput=283
+2020/06/02 02:36:17 thread 0: count=3400, time=3.0, throughput=282
+2020/06/02 02:36:17 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:36:17 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:36:20 thread 0: count=3400, time=3.0, throughput=281
+2020/06/02 02:36:20 thread 1: count=3400, time=3.0, throughput=279
+2020/06/02 02:36:20 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:36:20 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:36:23 thread 0: count=3300, time=3.0, throughput=273
+2020/06/02 02:36:23 thread 1: count=3500, time=3.0, throughput=286
+2020/06/02 02:36:23 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:36:23 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:36:26 thread 1: count=3400, time=3.1, throughput=276
+2020/06/02 02:36:26 thread 0: count=3600, time=3.1, throughput=292
+2020/06/02 02:36:26 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:36:26 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:36:29 thread 1: count=3600, time=3.0, throughput=297
+2020/06/02 02:36:29 thread 0: count=3200, time=3.0, throughput=263
+2020/06/02 02:36:29 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:36:29 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:36:32 thread 1: count=3800, time=3.0, throughput=313
+2020/06/02 02:36:32 thread 0: count=3800, time=3.0, throughput=313
+2020/06/02 02:36:32 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:36:32 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:36:35 thread 0: count=3800, time=3.1, throughput=309
+2020/06/02 02:36:35 thread 1: count=3800, time=3.1, throughput=309
+2020/06/02 02:36:35 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:36:35 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:36:38 thread 1: count=3800, time=3.1, throughput=309
+2020/06/02 02:36:38 thread 0: count=3800, time=3.1, throughput=309
+2020/06/02 02:36:38 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:36:38 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:36:41 thread 1: count=3700, time=3.0, throughput=307
+2020/06/02 02:36:41 thread 0: count=3700, time=3.0, throughput=307
+2020/06/02 02:36:41 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:36:41 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:36:44 thread 1: count=3800, time=3.1, throughput=311
+2020/06/02 02:36:44 thread 0: count=3800, time=3.1, throughput=311
+2020/06/02 02:36:44 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:36:44 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:36:47 thread 1: count=5400, time=3.0, throughput=445
+2020/06/02 02:36:47 thread 0: count=5400, time=3.0, throughput=445
+2020/06/02 02:36:47 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:36:47 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:36:51 thread 0: count=5400, time=3.0, throughput=446
+2020/06/02 02:36:51 thread 1: count=5400, time=3.0, throughput=446
+2020/06/02 02:36:51 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:36:51 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:36:54 thread 1: count=5400, time=3.0, throughput=448
+2020/06/02 02:36:54 thread 0: count=5400, time=3.0, throughput=448
+2020/06/02 02:36:54 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:36:54 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:36:57 thread 1: count=5400, time=3.0, throughput=447
+2020/06/02 02:36:57 thread 0: count=5400, time=3.0, throughput=447
+2020/06/02 02:36:57 thread 0: main loop, blockSize=256, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:36:57 thread 1: main loop, blockSize=256, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:37:00 thread 1: count=5400, time=3.0, throughput=449
+2020/06/02 02:37:00 thread 0: count=5400, time=3.0, throughput=449
+2020/06/02 02:37:00 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:37:00 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:37:03 thread 1: count=3400, time=3.0, throughput=280
+2020/06/02 02:37:03 thread 0: count=3400, time=3.1, throughput=277
+2020/06/02 02:37:03 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:37:03 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:37:06 thread 0: count=3300, time=3.1, throughput=266
+2020/06/02 02:37:06 thread 1: count=3300, time=3.1, throughput=266
+2020/06/02 02:37:06 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:37:06 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:37:09 thread 0: count=3100, time=3.0, throughput=254
+2020/06/02 02:37:09 thread 1: count=3100, time=3.1, throughput=252
+2020/06/02 02:37:09 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:37:09 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:37:12 thread 1: count=3100, time=3.0, throughput=256
+2020/06/02 02:37:12 thread 0: count=3200, time=3.0, throughput=262
+2020/06/02 02:37:12 thread 0: main loop, blockSize=256, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:37:12 thread 1: main loop, blockSize=256, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:37:15 thread 0: count=3400, time=3.0, throughput=281
+2020/06/02 02:37:15 thread 1: count=3400, time=3.0, throughput=278
+2020/06/02 02:37:15 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:37:15 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:37:18 thread 1: count=2900, time=3.0, throughput=240
+2020/06/02 02:37:18 thread 0: count=2900, time=3.0, throughput=238
+2020/06/02 02:37:18 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:37:18 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:37:21 thread 0: count=2900, time=3.1, throughput=237
+2020/06/02 02:37:21 thread 1: count=3000, time=3.1, throughput=243
+2020/06/02 02:37:21 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:37:21 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:37:24 thread 1: count=2700, time=3.1, throughput=221
+2020/06/02 02:37:24 thread 0: count=2800, time=3.1, throughput=227
+2020/06/02 02:37:24 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:37:24 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:37:27 thread 1: count=2900, time=3.1, throughput=236
+2020/06/02 02:37:27 thread 0: count=2900, time=3.1, throughput=234
+2020/06/02 02:37:27 thread 1: main loop, blockSize=256, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:37:27 thread 0: main loop, blockSize=256, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:37:30 thread 1: count=2800, time=3.0, throughput=231
+2020/06/02 02:37:30 thread 0: count=2800, time=3.0, throughput=230
+2020/06/02 02:37:30 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:37:30 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:37:33 thread 1: count=2800, time=3.0, throughput=232
+2020/06/02 02:37:33 thread 0: count=2900, time=3.1, throughput=235
+2020/06/02 02:37:33 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:37:33 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:37:36 thread 1: count=2800, time=3.0, throughput=232
+2020/06/02 02:37:36 thread 0: count=2900, time=3.0, throughput=240
+2020/06/02 02:37:36 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:37:36 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:37:39 thread 1: count=2800, time=3.1, throughput=226
+2020/06/02 02:37:39 thread 0: count=2900, time=3.1, throughput=233
+2020/06/02 02:37:39 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:37:39 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:37:42 thread 0: count=2900, time=3.1, throughput=235
+2020/06/02 02:37:42 thread 1: count=2900, time=3.1, throughput=234
+2020/06/02 02:37:42 thread 0: main loop, blockSize=256, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:37:42 thread 1: main loop, blockSize=256, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:37:46 thread 0: count=2800, time=3.1, throughput=228
+2020/06/02 02:37:46 thread 1: count=2800, time=3.1, throughput=228
+2020/06/02 02:37:46 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:37:46 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:37:49 thread 0: count=3000, time=3.1, throughput=244
+2020/06/02 02:37:49 thread 1: count=3000, time=3.1, throughput=243
+2020/06/02 02:37:49 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:37:49 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:37:52 thread 0: count=2900, time=3.0, throughput=240
+2020/06/02 02:37:52 thread 1: count=3000, time=3.0, throughput=247
+2020/06/02 02:37:52 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:37:52 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:37:55 thread 0: count=2900, time=3.0, throughput=240
+2020/06/02 02:37:55 thread 1: count=3000, time=3.1, throughput=244
+2020/06/02 02:37:55 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:37:55 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:37:58 thread 0: count=3000, time=3.0, throughput=247
+2020/06/02 02:37:58 thread 1: count=2900, time=3.1, throughput=237
+2020/06/02 02:37:58 thread 1: main loop, blockSize=256, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:37:58 thread 0: main loop, blockSize=256, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:38:01 thread 0: count=2900, time=3.1, throughput=236
+2020/06/02 02:38:01 thread 1: count=3100, time=3.1, throughput=251
+2020/06/02 02:38:01 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:38:01 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:38:04 thread 0: count=3300, time=3.0, throughput=274
+2020/06/02 02:38:04 thread 1: count=3500, time=3.0, throughput=287
+2020/06/02 02:38:04 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:38:04 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:38:07 thread 0: count=3400, time=3.0, throughput=282
+2020/06/02 02:38:07 thread 1: count=3300, time=3.0, throughput=270
+2020/06/02 02:38:07 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:38:07 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:38:10 thread 1: count=3300, time=3.0, throughput=273
+2020/06/02 02:38:10 thread 0: count=3500, time=3.1, throughput=285
+2020/06/02 02:38:10 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:38:10 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:38:13 thread 0: count=3200, time=3.0, throughput=265
+2020/06/02 02:38:13 thread 1: count=3400, time=3.0, throughput=280
+2020/06/02 02:38:13 thread 1: main loop, blockSize=256, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:38:13 thread 0: main loop, blockSize=256, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:38:16 thread 0: count=3400, time=3.0, throughput=282
+2020/06/02 02:38:16 thread 1: count=3400, time=3.1, throughput=277
+2020/06/02 02:38:16 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:38:16 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:38:19 thread 0: count=3700, time=3.0, throughput=307
+2020/06/02 02:38:19 thread 1: count=3700, time=3.0, throughput=306
+2020/06/02 02:38:19 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:38:19 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:38:22 thread 0: count=3700, time=3.0, throughput=307
+2020/06/02 02:38:22 thread 1: count=3700, time=3.0, throughput=307
+2020/06/02 02:38:22 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:38:22 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:38:25 thread 0: count=3700, time=3.0, throughput=306
+2020/06/02 02:38:25 thread 1: count=3700, time=3.0, throughput=305
+2020/06/02 02:38:25 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:38:25 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:38:28 thread 0: count=3700, time=3.0, throughput=304
+2020/06/02 02:38:28 thread 1: count=3700, time=3.0, throughput=304
+2020/06/02 02:38:28 thread 1: main loop, blockSize=256, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:38:28 thread 0: main loop, blockSize=256, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:38:31 thread 0: count=3700, time=3.1, throughput=301
+2020/06/02 02:38:31 thread 1: count=3700, time=3.1, throughput=301
+2020/06/02 02:38:31 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:38:31 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:38:34 thread 1: count=6500, time=3.0, throughput=1074
+2020/06/02 02:38:34 thread 0: count=5600, time=3.0, throughput=923
+2020/06/02 02:38:34 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:38:34 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:38:37 thread 1: count=5500, time=3.0, throughput=911
+2020/06/02 02:38:37 thread 0: count=6600, time=3.0, throughput=1092
+2020/06/02 02:38:37 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:38:37 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:38:40 thread 0: count=5900, time=3.0, throughput=982
+2020/06/02 02:38:40 thread 1: count=6200, time=3.0, throughput=1028
+2020/06/02 02:38:40 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:38:40 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:38:43 thread 0: count=6400, time=3.0, throughput=1061
+2020/06/02 02:38:43 thread 1: count=5700, time=3.0, throughput=941
+2020/06/02 02:38:43 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:38:43 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.0
+2020/06/02 02:38:46 thread 0: count=6300, time=3.0, throughput=1044
+2020/06/02 02:38:46 thread 1: count=5800, time=3.0, throughput=959
+2020/06/02 02:38:46 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:38:46 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:38:50 thread 0: count=2900, time=3.1, throughput=466
+2020/06/02 02:38:50 thread 1: count=2900, time=3.1, throughput=464
+2020/06/02 02:38:50 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:38:50 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:38:53 thread 1: count=3000, time=3.1, throughput=488
+2020/06/02 02:38:53 thread 0: count=2900, time=3.1, throughput=469
+2020/06/02 02:38:53 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:38:53 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:38:56 thread 0: count=2700, time=3.1, throughput=440
+2020/06/02 02:38:56 thread 1: count=2700, time=3.1, throughput=438
+2020/06/02 02:38:56 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:38:56 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:38:59 thread 0: count=2500, time=3.0, throughput=414
+2020/06/02 02:38:59 thread 1: count=2600, time=3.0, throughput=427
+2020/06/02 02:38:59 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:38:59 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.0
+2020/06/02 02:39:02 thread 0: count=2800, time=3.0, throughput=466
+2020/06/02 02:39:02 thread 1: count=2900, time=3.1, throughput=474
+2020/06/02 02:39:02 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:39:02 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:39:05 thread 0: count=2200, time=3.1, throughput=354
+2020/06/02 02:39:05 thread 1: count=2200, time=3.1, throughput=350
+2020/06/02 02:39:05 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:39:05 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:39:08 thread 1: count=2100, time=3.0, throughput=346
+2020/06/02 02:39:08 thread 0: count=2100, time=3.0, throughput=346
+2020/06/02 02:39:08 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:39:08 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:39:11 thread 1: count=2200, time=3.1, throughput=356
+2020/06/02 02:39:11 thread 0: count=2200, time=3.1, throughput=353
+2020/06/02 02:39:11 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:39:11 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:39:14 thread 0: count=2200, time=3.1, throughput=358
+2020/06/02 02:39:14 thread 1: count=2300, time=3.1, throughput=372
+2020/06/02 02:39:14 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:39:14 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.0
+2020/06/02 02:39:17 thread 1: count=2200, time=3.0, throughput=363
+2020/06/02 02:39:17 thread 0: count=2200, time=3.1, throughput=356
+2020/06/02 02:39:17 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:39:17 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:39:20 thread 1: count=2200, time=3.1, throughput=352
+2020/06/02 02:39:20 thread 0: count=2100, time=3.2, throughput=330
+2020/06/02 02:39:20 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:39:20 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:39:23 thread 1: count=2100, time=3.0, throughput=349
+2020/06/02 02:39:23 thread 0: count=2100, time=3.0, throughput=345
+2020/06/02 02:39:23 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:39:23 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:39:27 thread 0: count=2100, time=3.1, throughput=338
+2020/06/02 02:39:27 thread 1: count=2100, time=3.1, throughput=336
+2020/06/02 02:39:27 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:39:27 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:39:30 thread 0: count=2100, time=3.1, throughput=342
+2020/06/02 02:39:30 thread 1: count=2100, time=3.2, throughput=332
+2020/06/02 02:39:30 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:39:30 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.0
+2020/06/02 02:39:33 thread 1: count=2100, time=3.0, throughput=348
+2020/06/02 02:39:33 thread 0: count=2100, time=3.0, throughput=348
+2020/06/02 02:39:33 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:39:33 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:39:36 thread 1: count=2100, time=3.1, throughput=344
+2020/06/02 02:39:36 thread 0: count=2100, time=3.1, throughput=341
+2020/06/02 02:39:36 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:39:36 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:39:39 thread 0: count=2000, time=3.0, throughput=332
+2020/06/02 02:39:39 thread 1: count=2100, time=3.1, throughput=343
+2020/06/02 02:39:39 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:39:39 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:39:42 thread 1: count=2000, time=3.0, throughput=329
+2020/06/02 02:39:42 thread 0: count=2000, time=3.1, throughput=327
+2020/06/02 02:39:42 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:39:42 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:39:45 thread 1: count=1900, time=3.1, throughput=309
+2020/06/02 02:39:45 thread 0: count=1900, time=3.1, throughput=305
+2020/06/02 02:39:45 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:39:45 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.0
+2020/06/02 02:39:48 thread 1: count=1900, time=3.1, throughput=304
+2020/06/02 02:39:48 thread 0: count=1900, time=3.2, throughput=294
+2020/06/02 02:39:48 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:39:48 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:39:51 thread 1: count=1800, time=3.0, throughput=295
+2020/06/02 02:39:51 thread 0: count=2000, time=3.1, throughput=318
+2020/06/02 02:39:51 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:39:51 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:39:54 thread 1: count=2100, time=3.0, throughput=348
+2020/06/02 02:39:54 thread 0: count=2000, time=3.1, throughput=326
+2020/06/02 02:39:54 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:39:54 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:39:58 thread 0: count=2100, time=3.1, throughput=338
+2020/06/02 02:39:58 thread 1: count=2100, time=3.1, throughput=338
+2020/06/02 02:39:58 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:39:58 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:40:01 thread 1: count=1900, time=3.1, throughput=310
+2020/06/02 02:40:01 thread 0: count=2000, time=3.1, throughput=322
+2020/06/02 02:40:01 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:40:01 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.0
+2020/06/02 02:40:04 thread 0: count=2000, time=3.0, throughput=332
+2020/06/02 02:40:04 thread 1: count=2100, time=3.0, throughput=347
+2020/06/02 02:40:04 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:40:04 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:40:07 thread 0: count=1900, time=3.0, throughput=316
+2020/06/02 02:40:07 thread 1: count=1900, time=3.0, throughput=316
+2020/06/02 02:40:07 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:40:07 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:40:10 thread 1: count=2000, time=3.1, throughput=325
+2020/06/02 02:40:10 thread 0: count=2000, time=3.1, throughput=325
+2020/06/02 02:40:10 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:40:10 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:40:13 thread 0: count=2000, time=3.1, throughput=322
+2020/06/02 02:40:13 thread 1: count=2000, time=3.1, throughput=322
+2020/06/02 02:40:13 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:40:13 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:40:16 thread 1: count=2000, time=3.1, throughput=322
+2020/06/02 02:40:16 thread 0: count=2000, time=3.1, throughput=322
+2020/06/02 02:40:16 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:40:16 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.0
+2020/06/02 02:40:19 thread 0: count=2000, time=3.1, throughput=317
+2020/06/02 02:40:19 thread 1: count=2000, time=3.1, throughput=317
+2020/06/02 02:40:19 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:40:19 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:40:22 thread 0: count=6900, time=3.0, throughput=1147
+2020/06/02 02:40:22 thread 1: count=6900, time=3.0, throughput=1147
+2020/06/02 02:40:22 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:40:22 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:40:25 thread 1: count=7000, time=3.0, throughput=1157
+2020/06/02 02:40:25 thread 0: count=7000, time=3.0, throughput=1156
+2020/06/02 02:40:25 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:40:25 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:40:28 thread 0: count=7000, time=3.0, throughput=1159
+2020/06/02 02:40:28 thread 1: count=7000, time=3.0, throughput=1158
+2020/06/02 02:40:28 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:40:28 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:40:31 thread 0: count=7000, time=3.0, throughput=1163
+2020/06/02 02:40:31 thread 1: count=7000, time=3.0, throughput=1161
+2020/06/02 02:40:31 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:40:31 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=0.5
+2020/06/02 02:40:34 thread 1: count=7000, time=3.0, throughput=1159
+2020/06/02 02:40:34 thread 0: count=7000, time=3.0, throughput=1158
+2020/06/02 02:40:34 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:40:34 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:40:37 thread 1: count=3000, time=3.0, throughput=498
+2020/06/02 02:40:37 thread 0: count=3000, time=3.2, throughput=467
+2020/06/02 02:40:37 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:40:37 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:40:41 thread 1: count=3000, time=3.1, throughput=485
+2020/06/02 02:40:41 thread 0: count=3000, time=3.1, throughput=485
+2020/06/02 02:40:41 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:40:41 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:40:44 thread 0: count=2800, time=3.0, throughput=461
+2020/06/02 02:40:44 thread 1: count=2800, time=3.0, throughput=460
+2020/06/02 02:40:44 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:40:44 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:40:47 thread 1: count=2800, time=3.0, throughput=462
+2020/06/02 02:40:47 thread 0: count=2800, time=3.0, throughput=460
+2020/06/02 02:40:47 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:40:47 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=0.5
+2020/06/02 02:40:50 thread 0: count=2800, time=3.0, throughput=465
+2020/06/02 02:40:50 thread 1: count=2900, time=3.2, throughput=449
+2020/06/02 02:40:50 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:40:50 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:40:53 thread 0: count=2300, time=3.0, throughput=381
+2020/06/02 02:40:53 thread 1: count=2300, time=3.0, throughput=378
+2020/06/02 02:40:53 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:40:53 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:40:56 thread 0: count=2200, time=3.0, throughput=363
+2020/06/02 02:40:56 thread 1: count=2300, time=3.1, throughput=375
+2020/06/02 02:40:56 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:40:56 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:40:59 thread 0: count=2200, time=3.0, throughput=361
+2020/06/02 02:40:59 thread 1: count=2300, time=3.1, throughput=375
+2020/06/02 02:40:59 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:40:59 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:41:02 thread 1: count=2200, time=3.0, throughput=363
+2020/06/02 02:41:02 thread 0: count=2300, time=3.2, throughput=357
+2020/06/02 02:41:02 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:41:02 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=0.5
+2020/06/02 02:41:05 thread 0: count=2200, time=3.0, throughput=362
+2020/06/02 02:41:05 thread 1: count=2200, time=3.1, throughput=355
+2020/06/02 02:41:05 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:41:05 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:41:08 thread 1: count=2000, time=3.0, throughput=333
+2020/06/02 02:41:08 thread 0: count=2100, time=3.1, throughput=343
+2020/06/02 02:41:08 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:41:08 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:41:11 thread 1: count=2100, time=3.0, throughput=348
+2020/06/02 02:41:11 thread 0: count=2200, time=3.1, throughput=357
+2020/06/02 02:41:11 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:41:11 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:41:15 thread 0: count=1900, time=3.1, throughput=309
+2020/06/02 02:41:15 thread 1: count=1900, time=3.1, throughput=305
+2020/06/02 02:41:15 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:41:15 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:41:18 thread 1: count=1700, time=3.0, throughput=281
+2020/06/02 02:41:18 thread 0: count=1700, time=3.0, throughput=279
+2020/06/02 02:41:18 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:41:18 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=0.5
+2020/06/02 02:41:21 thread 0: count=2000, time=3.1, throughput=321
+2020/06/02 02:41:21 thread 1: count=2000, time=3.1, throughput=319
+2020/06/02 02:41:21 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:41:21 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:41:24 thread 0: count=1800, time=3.1, throughput=293
+2020/06/02 02:41:24 thread 1: count=1900, time=3.1, throughput=304
+2020/06/02 02:41:24 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:41:24 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:41:27 thread 0: count=1600, time=3.1, throughput=257
+2020/06/02 02:41:27 thread 1: count=1700, time=3.1, throughput=272
+2020/06/02 02:41:27 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:41:27 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:41:30 thread 0: count=1800, time=3.1, throughput=292
+2020/06/02 02:41:30 thread 1: count=1900, time=3.1, throughput=308
+2020/06/02 02:41:30 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:41:30 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:41:33 thread 0: count=2100, time=3.0, throughput=348
+2020/06/02 02:41:33 thread 1: count=2200, time=3.1, throughput=350
+2020/06/02 02:41:33 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:41:33 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=0.5
+2020/06/02 02:41:36 thread 1: count=2100, time=3.1, throughput=343
+2020/06/02 02:41:36 thread 0: count=2100, time=3.1, throughput=338
+2020/06/02 02:41:36 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:41:36 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:41:39 thread 1: count=2000, time=3.1, throughput=322
+2020/06/02 02:41:39 thread 0: count=1900, time=3.1, throughput=303
+2020/06/02 02:41:39 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:41:39 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:41:43 thread 0: count=2000, time=3.1, throughput=321
+2020/06/02 02:41:43 thread 1: count=1900, time=3.1, throughput=304
+2020/06/02 02:41:43 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:41:43 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:41:46 thread 0: count=1800, time=3.1, throughput=291
+2020/06/02 02:41:46 thread 1: count=2000, time=3.1, throughput=318
+2020/06/02 02:41:46 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:41:46 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:41:49 thread 1: count=2100, time=3.1, throughput=338
+2020/06/02 02:41:49 thread 0: count=1900, time=3.1, throughput=306
+2020/06/02 02:41:49 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:41:49 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=0.5
+2020/06/02 02:41:52 thread 0: count=2000, time=3.1, throughput=325
+2020/06/02 02:41:52 thread 1: count=2000, time=3.1, throughput=319
+2020/06/02 02:41:52 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:41:52 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:41:55 thread 0: count=2000, time=3.1, throughput=320
+2020/06/02 02:41:55 thread 1: count=2000, time=3.1, throughput=320
+2020/06/02 02:41:55 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:41:55 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:41:58 thread 1: count=1900, time=3.0, throughput=316
+2020/06/02 02:41:58 thread 0: count=1900, time=3.0, throughput=316
+2020/06/02 02:41:58 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:41:58 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:42:01 thread 0: count=2000, time=3.1, throughput=319
+2020/06/02 02:42:01 thread 1: count=2000, time=3.1, throughput=319
+2020/06/02 02:42:01 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:42:01 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:42:04 thread 1: count=2000, time=3.1, throughput=317
+2020/06/02 02:42:04 thread 0: count=2000, time=3.1, throughput=317
+2020/06/02 02:42:04 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:42:04 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=0.5
+2020/06/02 02:42:07 thread 1: count=2000, time=3.1, throughput=320
+2020/06/02 02:42:07 thread 0: count=2000, time=3.1, throughput=320
+2020/06/02 02:42:08 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:42:08 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:42:11 thread 0: count=7100, time=3.0, throughput=1174
+2020/06/02 02:42:11 thread 1: count=7100, time=3.0, throughput=1173
+2020/06/02 02:42:11 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:42:11 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:42:14 thread 1: count=7200, time=3.0, throughput=1185
+2020/06/02 02:42:14 thread 0: count=7200, time=3.0, throughput=1186
+2020/06/02 02:42:14 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:42:14 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:42:17 thread 0: count=7200, time=3.0, throughput=1184
+2020/06/02 02:42:17 thread 1: count=7200, time=3.0, throughput=1184
+2020/06/02 02:42:17 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:42:17 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:42:20 thread 1: count=7200, time=3.0, throughput=1186
+2020/06/02 02:42:20 thread 0: count=7200, time=3.0, throughput=1186
+2020/06/02 02:42:20 thread 1: main loop, blockSize=512, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:42:20 thread 0: main loop, blockSize=512, writeRatio=0.0, randomRatio=1.0
+2020/06/02 02:42:23 thread 1: count=7200, time=3.0, throughput=1185
+2020/06/02 02:42:23 thread 0: count=7200, time=3.0, throughput=1186
+2020/06/02 02:42:23 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:42:23 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:42:26 thread 1: count=2800, time=3.0, throughput=465
+2020/06/02 02:42:26 thread 0: count=2900, time=3.1, throughput=474
+2020/06/02 02:42:26 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:42:26 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:42:29 thread 0: count=2700, time=3.0, throughput=448
+2020/06/02 02:42:29 thread 1: count=2700, time=3.0, throughput=445
+2020/06/02 02:42:29 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:42:29 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:42:32 thread 1: count=2700, time=3.0, throughput=447
+2020/06/02 02:42:32 thread 0: count=2700, time=3.0, throughput=445
+2020/06/02 02:42:32 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:42:32 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:42:35 thread 1: count=2800, time=3.0, throughput=461
+2020/06/02 02:42:35 thread 0: count=2800, time=3.1, throughput=458
+2020/06/02 02:42:35 thread 0: main loop, blockSize=512, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:42:35 thread 1: main loop, blockSize=512, writeRatio=0.2, randomRatio=1.0
+2020/06/02 02:42:38 thread 0: count=2700, time=3.0, throughput=443
+2020/06/02 02:42:38 thread 1: count=2700, time=3.0, throughput=443
+2020/06/02 02:42:38 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:42:38 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:42:41 thread 1: count=2300, time=3.1, throughput=372
+2020/06/02 02:42:41 thread 0: count=2300, time=3.1, throughput=369
+2020/06/02 02:42:41 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:42:41 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:42:44 thread 0: count=2400, time=3.1, throughput=388
+2020/06/02 02:42:44 thread 1: count=2400, time=3.1, throughput=385
+2020/06/02 02:42:44 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:42:44 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:42:47 thread 1: count=2300, time=3.1, throughput=373
+2020/06/02 02:42:47 thread 0: count=2300, time=3.1, throughput=373
+2020/06/02 02:42:47 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:42:47 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:42:50 thread 0: count=2200, time=3.0, throughput=365
+2020/06/02 02:42:50 thread 1: count=2200, time=3.0, throughput=363
+2020/06/02 02:42:50 thread 1: main loop, blockSize=512, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:42:50 thread 0: main loop, blockSize=512, writeRatio=0.4, randomRatio=1.0
+2020/06/02 02:42:53 thread 0: count=2300, time=3.0, throughput=378
+2020/06/02 02:42:53 thread 1: count=2300, time=3.1, throughput=373
+2020/06/02 02:42:53 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:42:53 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:42:56 thread 0: count=2200, time=3.0, throughput=362
+2020/06/02 02:42:56 thread 1: count=2100, time=3.0, throughput=345
+2020/06/02 02:42:56 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:42:56 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:42:59 thread 1: count=2200, time=3.0, throughput=364
+2020/06/02 02:42:59 thread 0: count=2200, time=3.0, throughput=361
+2020/06/02 02:42:59 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:42:59 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:43:02 thread 1: count=2200, time=3.0, throughput=361
+2020/06/02 02:43:02 thread 0: count=2200, time=3.1, throughput=359
+2020/06/02 02:43:02 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:43:02 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:43:05 thread 1: count=2100, time=3.0, throughput=348
+2020/06/02 02:43:06 thread 0: count=2200, time=3.1, throughput=351
+2020/06/02 02:43:06 thread 0: main loop, blockSize=512, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:43:06 thread 1: main loop, blockSize=512, writeRatio=0.5, randomRatio=1.0
+2020/06/02 02:43:09 thread 0: count=2100, time=3.0, throughput=349
+2020/06/02 02:43:09 thread 1: count=2100, time=3.0, throughput=345
+2020/06/02 02:43:09 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:43:09 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:43:12 thread 0: count=2200, time=3.1, throughput=355
+2020/06/02 02:43:12 thread 1: count=2100, time=3.1, throughput=338
+2020/06/02 02:43:12 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:43:12 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:43:15 thread 1: count=2100, time=3.0, throughput=347
+2020/06/02 02:43:15 thread 0: count=2200, time=3.1, throughput=357
+2020/06/02 02:43:15 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:43:15 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:43:18 thread 0: count=2000, time=3.0, throughput=330
+2020/06/02 02:43:18 thread 1: count=2100, time=3.1, throughput=340
+2020/06/02 02:43:18 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:43:18 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:43:21 thread 1: count=2000, time=3.0, throughput=330
+2020/06/02 02:43:21 thread 0: count=2100, time=3.1, throughput=335
+2020/06/02 02:43:21 thread 1: main loop, blockSize=512, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:43:21 thread 0: main loop, blockSize=512, writeRatio=0.6, randomRatio=1.0
+2020/06/02 02:43:24 thread 1: count=2100, time=3.0, throughput=344
+2020/06/02 02:43:24 thread 0: count=2100, time=3.1, throughput=338
+2020/06/02 02:43:24 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:43:24 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:43:27 thread 1: count=2100, time=3.1, throughput=342
+2020/06/02 02:43:27 thread 0: count=2000, time=3.1, throughput=318
+2020/06/02 02:43:27 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:43:27 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:43:30 thread 1: count=1900, time=3.0, throughput=315
+2020/06/02 02:43:30 thread 0: count=1900, time=3.0, throughput=315
+2020/06/02 02:43:30 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:43:30 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:43:33 thread 1: count=1900, time=3.1, throughput=303
+2020/06/02 02:43:33 thread 0: count=2100, time=3.1, throughput=333
+2020/06/02 02:43:33 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:43:33 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:43:37 thread 0: count=2100, time=3.2, throughput=331
+2020/06/02 02:43:37 thread 1: count=2000, time=3.2, throughput=314
+2020/06/02 02:43:37 thread 1: main loop, blockSize=512, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:43:37 thread 0: main loop, blockSize=512, writeRatio=0.8, randomRatio=1.0
+2020/06/02 02:43:40 thread 0: count=2000, time=3.0, throughput=329
+2020/06/02 02:43:40 thread 1: count=2000, time=3.1, throughput=323
+2020/06/02 02:43:40 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:43:40 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:43:43 thread 0: count=2000, time=3.1, throughput=319
+2020/06/02 02:43:43 thread 1: count=2000, time=3.1, throughput=319
+2020/06/02 02:43:43 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:43:43 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:43:46 thread 1: count=1900, time=3.0, throughput=315
+2020/06/02 02:43:46 thread 0: count=1900, time=3.0, throughput=314
+2020/06/02 02:43:46 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:43:46 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:43:49 thread 1: count=2000, time=3.2, throughput=314
+2020/06/02 02:43:49 thread 0: count=2000, time=3.2, throughput=314
+2020/06/02 02:43:49 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:43:49 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:43:52 thread 0: count=2000, time=3.1, throughput=317
+2020/06/02 02:43:52 thread 1: count=2000, time=3.1, throughput=317
+2020/06/02 02:43:52 thread 1: main loop, blockSize=512, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:43:52 thread 0: main loop, blockSize=512, writeRatio=1.0, randomRatio=1.0
+2020/06/02 02:43:55 thread 0: count=1900, time=3.0, throughput=312
+2020/06/02 02:43:55 thread 1: count=1900, time=3.0, throughput=312
