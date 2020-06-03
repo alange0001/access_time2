@@ -178,15 +178,15 @@ func main() {
 		////// Experiment Loop //////
 		timeStart := time.Now()
 		var ratiosThread0 ratioArray
-		for _, blockSize := range options.BlockSize {
-			for _, randomRatio := range options.RandomRatio {
-				for _, ratio := range options.WriteRatio {
-					if len(options.WriteRatioThread0) == 0 {
-						ratiosThread0 = ratioArray{ratio}
-					} else {
-						ratiosThread0 = options.WriteRatioThread0
-					}
-					for _, ratioT0 := range ratiosThread0 {
+		for _, ratio := range options.WriteRatio {
+			if len(options.WriteRatioThread0) == 0 {
+				ratiosThread0 = ratioArray{ratio}
+			} else {
+				ratiosThread0 = options.WriteRatioThread0
+			}
+			for _, ratioT0 := range ratiosThread0 {
+				for _, randomRatio := range options.RandomRatio {
+					for _, blockSize := range options.BlockSize {
 						for runs := uint(0); runs < options.Runs; runs++ {
 							for i, t := range threads {
 								wg.Add(1)
@@ -275,7 +275,7 @@ func (thread *threadType) createFile() {
 func (thread *threadType) openFile() {
 	var stats syscall.Stat_t
 	log.Printf("thread %v: Creating file %v", thread.id, thread.filename)
-	fd, err := syscall.Open(thread.filename, syscall.O_RDWR|syscall.O_DIRECT, 0600)
+	fd, err := syscall.Open(thread.filename, syscall.O_RDWR|syscall.O_DSYNC|syscall.O_DIRECT, 0600)
 	if err != nil {
 		log.Fatal(fmt.Sprintf("thread %v: Error opening file %v: %v", thread.id, thread.filename, err))
 	}

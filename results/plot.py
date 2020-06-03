@@ -242,12 +242,12 @@ class File:
 					GROUP BY WriteRatio ORDER BY WriteRatio'''.format(self.id, bs, rr),
 					printsql=printsql)
 				A = numpy.array(q.fetchall()).T
-				ax.plot(A[0], A[1], '-', color=colors[ci], lw=1, label='bs={}, rand {}%, total'.format(bs, int(rr*100)))
-				ax.plot(A[0], A[2], '.-', color=colors[ci], lw=1, label='bs={}, rand {}%, thread0'.format(bs, int(rr*100)))
+				ax.plot(A[0], A[1], '-', color=colors[ci], lw=1, label='rand {}%, total'.format(int(rr*100)))
+				ax.plot(A[0], A[2], '.-', color=colors[ci], lw=1, label='rand {}%, thread0'.format(int(rr*100)))
 				ci += 1
 
-			ax.set(title='fs%={FilesystemPercent}, threads={NumberOfFiles}'.format(
-				**self.metadata
+			ax.set(title='fs%={FilesystemPercent}, threads={NumberOfFiles}, bs={bs}'.format(
+				**self.metadata, bs=bs
 				), xlabel='writes/reads', ylabel='MiB/s')
 
 			chartBox = ax.get_position()
@@ -278,7 +278,7 @@ class File:
 		'''
 
 
-g = Graphs('exp7-ubuntu')
+g = Graphs('exp8-ubuntu')
 Options.format = 'png'
 g.printAll()
 Options.format = 'pdf'
